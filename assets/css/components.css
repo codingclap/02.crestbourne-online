@@ -81,7 +81,7 @@
   font-family: var(--font-primary);
   font-size: 0.72rem;
   font-weight: var(--fw-medium);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-white);
   background: transparent;
@@ -363,15 +363,16 @@
     display: block;
     margin-top: 2rem;
   }
- 
+
   .site-navigation__mobile-cta .btn-crestbourne {
     color: var(--color-text);
     width: 100%;
     padding: 0.9rem 1.5rem;
     background-color: var(--color-primary);
   }
-  .site-navigation__mobile-cta .btn-crestbourne svg path{
-    fill:var(--color-text);
+
+  .site-navigation__mobile-cta .btn-crestbourne svg path {
+    fill: var(--color-text);
   }
 }
 
@@ -386,428 +387,81 @@
 }
 
 /* ==========================================================================
-   HERO SECTION (HOMEPAGE FIRST SECTION)
+   SITE HEADER & NAVIGATION
    ========================================================================== */
 
-.hero-section {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  padding-top: calc(var(--header-height) + 2rem);
-  padding-bottom: 4.5rem;
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  overflow: hidden;
+
+/* ==========================================================================
+   VALUE PILLARS STRIP
+   ========================================================================== */
+
+.value-strip {
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(29, 42, 51, 0.08);
+  padding: 1.1rem 0;
 }
 
-.hero-section__backdrop {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.hero-section__bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center right;  
-}
-
-.hero-section__overlay {
-  position: absolute;
-  inset: 0;
-  /* background:
-    linear-gradient(
-      90deg,
-      rgba(26, 41, 51, 0.86) 0%,
-      rgba(32, 52, 64, 0.62) 48%,
-      rgba(26, 41, 51, 0.28) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(26, 41, 51, 0.58) 0%,
-      rgba(26, 41, 51, 0.08) 32%,
-      rgba(26, 41, 51, 0.45) 100%
-    ); */
-}
-
-.hero-section__container {
-  position: relative;
-  z-index: 2;
+.value-strip__container {
   max-width: var(--container-width);
 }
 
-.hero-section__content {
-  max-width: 100rem;
-}
-
-.hero-section__eyebrow {
-  margin: 0 0 1.25rem;
-  font-family: var(--font-primary);
-  font-size: 0.78rem;
-  font-weight: var(--fw-medium);
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-white-muted);
-}
-
-.hero-section__title {
-  margin: 0 0 2.5rem;
-  font-family: var(--font-secondary);
-  font-size: clamp(2.70rem, 7vw, 5.85rem);
-  font-weight: var(--fw-regular);
-  line-height: 1.07;
-  letter-spacing: -0.015em;
-  color: var(--color-white);
-}
-
-/* Hero Action Row: Video Pill + Underlined Link */
-.hero-section__actions {
+.value-strip__list {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 2.25rem;
-}
-
-.media-pill {
-  position: relative;
-  width: 300px;
-  height: 85px;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
   padding: 0;
-  border: 1px solid var(--color-white-subtle);
-  border-radius: var(--radius-pill);
-  overflow: hidden;
-  background-color: var(--color-secondary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-end;
-  transition: transform var(--transition-smooth), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.media-pill:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-primary);
-  box-shadow: 0 14px 32px rgba(26, 41, 51, 0.45);
+.value-strip__item {
+  flex: 1 1 0;
+  text-align: center;
 }
 
-.media-pill__image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-smooth);
-}
-
-.media-pill:hover .media-pill__image {
-  transform: scale(1.07);
-}
-
-.media-pill__overlay {
-  position: absolute;
-  inset: 0;
-  /* background: linear-gradient(90deg, rgba(26, 41, 51, 0.1) 0%, rgba(26, 41, 51, 0.55) 100%); */
-}
-
-.media-pill__play-btn {
-  position: relative;
-  z-index: 2;
-  width: 66px;
-  height: 66px;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.30);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  color: var(--color-white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
-}
-
-.media-pill:hover .media-pill__play-btn {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-dark);
-  transform: scale(1.08);
-}
-
-.media-pill__play-icon {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-  transition: filter var(--transition-base), transform var(--transition-base);
-}
-
-.media-pill:hover .media-pill__play-icon {
-  filter: brightness(0) saturate(100%) invert(13%) sepia(24%) saturate(850%) hue-rotate(162deg) brightness(94%) contrast(92%);
-}
-
-.hero-section__link {
-  position: relative;
+.value-strip__label {
   display: inline-block;
-  padding-bottom: 0.35rem;
   font-family: var(--font-primary);
-  font-size: 1.05rem;
-  font-weight: var(--fw-regular);
-  color: var(--color-white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
-  transition: color var(--transition-base), border-color var(--transition-base);
-}
-
-.hero-section__link:hover {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
-}
-
-/* Hero Responsive Overrides */
-@media (max-width: 991.98px) {
-  .hero-section__bg-image {
-    object-position: 68% center;
-  }
-
-  .hero-section__overlay {
-    /* background: linear-gradient(
-      180deg,
-      rgba(26, 41, 51, 0.78) 0%,
-      rgba(26, 41, 51, 0.68) 55%,
-      rgba(26, 41, 51, 0.85) 100%
-    ); */
-  }
-}
-
-@media (max-width: 575.98px) {
-  .hero-section {
-    align-items: center;
-    padding-top: calc(var(--header-height) + 2.75rem);
-    padding-bottom: 7.5rem;
-  }
-
-  .hero-section__eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    margin-bottom: 1rem;
-  }
-
-  .hero-section__title {
-    font-size: 2.50rem;
-    line-height: 1.12;
-    margin-bottom: 2rem;
-  }
-
-  .hero-section__actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-
-  .media-pill__play-btn {
-    width: 60px;
-    height: 60px;
-  }
-
-  .media-pill {
-    width: 210px;
-    height: 75px;
-  }
-}
-
-/* ==========================================================================
-   FLOATING CIRCULAR "SPEAK TO AN ADVISOR" BADGE (FIGMA GLASSMORPHIC STYLE)
-   ========================================================================== */
-
-.advisor-badge {
-  position: absolute;
-  right: max(2.25rem, calc((100vw - var(--container-width)) / 2 + 1rem));
-  bottom: 2.25rem;
-  z-index: 3;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.21);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
-}
-
-.advisor-badge:hover {
-  transform: scale(1.04);
-  border-color: var(--color-primary);
-  background-color: rgba(26, 41, 51, 0.45);
-}
-
-.advisor-badge__ring {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-origin: 50% 50%;
-  transform-box: fill-box;
-  animation: advisorSpin 20s linear infinite;
-  will-change: transform;
-}
-
-.advisor-badge:hover .advisor-badge__ring {
-  animation-play-state: paused;
-}
-
-.advisor-badge__text {
-  fill: var(--color-white-muted);
-  font-family: var(--font-primary);
-  font-size: 10.2px;
+  font-size: 0.88rem;
   font-weight: var(--fw-medium);
-  letter-spacing: 2.3px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.advisor-badge__center {
-  position: absolute;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: transparent;
-  color: var(--color-white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color var(--transition-base), transform var(--transition-base);
-}
-
-.advisor-badge__arrow-svg,
-.advisor-badge__arrow-icon {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-  display: block;
-  transition: filter var(--transition-base), transform var(--transition-base);
-}
-
-.advisor-badge:hover .advisor-badge__center {
   color: var(--color-primary);
-  transform: translate(3px, -3px);
+  line-height: 1.5;
 }
 
-.advisor-badge:hover .advisor-badge__arrow-icon {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(24%) saturate(650%) hue-rotate(358deg) brightness(92%) contrast(88%);
-}
-
-@keyframes advisorSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Advisor Badge Responsive Overrides */
+/* Value Strip Responsive Overrides */
 @media (max-width: 991.98px) {
-  .advisor-badge {
-    width: 132px;
-    height: 132px;
-    right: 1.5rem;
-    bottom: 1.5rem;
+  .value-strip {
+    padding: 1.75rem 0;
   }
 
-  .advisor-badge__arrow-svg,
-  .advisor-badge__arrow-icon {
-    width: 28px;
-    height: 28px;
+  .value-strip__list {
+    gap: 1.25rem;
+  }
+
+  .value-strip__label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
   }
 }
 
-@media (max-width: 575.98px) {
-  .advisor-badge {
-    width: 112px;
-    height: 112px;
-    right: 1.25rem;
-    bottom: 1.25rem;
+@media (max-width: 767.98px) {
+  .value-strip {
+    padding: 1.65rem 0;
   }
 
-  .advisor-badge__center {
-    width: 38px;
-    height: 38px;
+  .value-strip__list {
+    flex-direction: column;
+    gap: 0.9rem;
   }
 
-  .advisor-badge__arrow-svg,
-  .advisor-badge__arrow-icon {
-    width: 24px;
-    height: 24px;
+  .value-strip__item {
+    width: 100%;
   }
 }
 
 /* ==========================================================================
-   VIDEO LIGHTBOX MODAL
+   VALUE PILLARS STRIP
    ========================================================================== */
-
-.video-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 1080;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-.video-lightbox[hidden] {
-  display: none;
-}
-
-.video-lightbox__backdrop {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(26, 41, 51, 0.88);
-  backdrop-filter: blur(8px);
-}
-
-.video-lightbox__dialog {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 920px;
-}
-
-.video-lightbox__close {
-  position: absolute;
-  top: -2.75rem;
-  right: 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid var(--color-white-subtle);
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--transition-base), color var(--transition-base);
-}
-
-.video-lightbox__close:hover {
-  background-color: var(--color-primary);
-  color: var(--color-dark);
-}
-
-.video-lightbox__frame {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-white-subtle);
-  background-color: var(--color-dark);
-  aspect-ratio: 16 / 9;
-}
-
-.video-lightbox__player {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}

@@ -19,12 +19,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-
+    <!-- Owl Carousel 2.3.4 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous" />
     <!-- Custom Modular CSS -->
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/components.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
 </head>
 
 <body class="page-home">
@@ -222,6 +227,10 @@
             </a>
         </section>
     </main>
+    <!-- =====================================================================
+       MAIN CONTENT - HERO SECTION (FIRST SECTION)
+  ====================================================================== -->
+
 
     <!-- =====================================================================
        LIGHTBOX MODAL FOR HERO SHOWCASE VIDEO
@@ -240,6 +249,276 @@
             </div>
         </div>
     </div>
+    <!-- =====================================================================
+       LIGHTBOX MODAL FOR HERO SHOWCASE VIDEO
+  ====================================================================== -->
+
+
+    <!-- =====================================================================
+     VALUE PILLARS STRIP
+====================================================================== -->
+    <section class="value-strip" aria-label="Our Core Commitments">
+        <div class="container-xl value-strip__container">
+            <ul class="value-strip__list">
+                <li class="value-strip__item">
+                    <span class="value-strip__label">A Property That Fits Your Goals</span>
+                </li>
+                <li class="value-strip__item">
+                    <span class="value-strip__label">Clarity At Every Step</span>
+                </li>
+                <li class="value-strip__item">
+                    <span class="value-strip__label">A Relationship Beyond The Transaction</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- =====================================================================
+     VALUE PILLARS STRIP
+====================================================================== -->
+
+
+    <!-- =====================================================================
+     OFF-PLAN PROJECTS SECTION
+====================================================================== -->
+    <section class="offplan-section" id="off-plan" aria-labelledby="offplanHeading">
+        <div class="container-xl offplan-section__container">
+
+            <!-- Section Header -->
+            <header class="offplan-section__header">
+                <p class="offplan-section__eyebrow">A Look At What's Next</p>
+                <h2 class="offplan-section__title" id="offplanHeading">
+                    New Possibilities. In Remarkable Places.
+                </h2>
+                <p class="offplan-section__subtitle">
+                    Explore a selection of off-plan living across Dubai's most sought-after communities
+                </p>
+            </header>
+
+            <!-- Two-Column Interactive Showcase -->
+            <div class="row align-items-stretch g-4 g-lg-5 offplan-section__body">
+
+                <!-- Left Column: Featured Project Image Frame -->
+                <div class="col-12 col-lg-5">
+                    <div class="offplan-section__media">
+                        <img src="assets/images/off-plan-waterfront-residences.webp"
+                            alt="Waterfront Residences at Dubai Creek Harbour"
+                            class="offplan-section__image offplan-section__image--active" data-offplan-preview="0" />
+                        <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?auto=format&fit=crop&w=1000&q=85"
+                            alt="Skyline Residences at Downtown Dubai" class="offplan-section__image"
+                            data-offplan-preview="1" />
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85"
+                            alt="Garden Villas at Dubai Hills Estate" class="offplan-section__image"
+                            data-offplan-preview="2" />
+                    </div>
+                </div>
+
+                <!-- Right Column: Project List & CTA -->
+                <div class="col-12 col-lg-7">
+                    <div class="offplan-section__list-wrapper">
+                        <ul class="offplan-list">
+
+                            <!-- Project Item 1 -->
+                            <li class="offplan-list__item offplan-list__item--active" data-offplan-trigger="0">
+                                <a href="#waterfront-residences" class="offplan-list__link">
+                                    <div class="offplan-list__info">
+                                        <div class="offplan-list__meta">
+                                            <i class="bi bi-geo-alt offplan-list__meta-icon" aria-hidden="true"></i>
+                                            <span>Apartments</span>
+                                            <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
+                                            <span>Dubai Creek Harbour</span>
+                                        </div>
+                                        <h3 class="offplan-list__name">Waterfront Residences</h3>
+                                    </div>
+
+                                    <div class="offplan-list__action">
+                                        <span class="offplan-list__price">Price to be confirmed</span>
+                                        <span class="offplan-list__circle-btn" aria-hidden="true">
+                                            <svg class="offplan-list__circle-svg" width="42" height="42"
+                                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="offplan-list__circle-ring" cx="20.6817" cy="20.6817"
+                                                    r="17.5" stroke="currentColor" />
+                                                <path class="offplan-list__circle-arrow"
+                                                    d="M25.4448 18.8041L13.5857 28.549L11.9856 26.6017L23.8447 16.8569L14.321 15.9248L14.5825 13.4177L28.3886 14.7688L27.0231 28.5573L24.5128 28.3278L25.4448 18.8041Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Project Item 2 -->
+                            <li class="offplan-list__item" data-offplan-trigger="1">
+                                <a href="#skyline-residences" class="offplan-list__link">
+                                    <div class="offplan-list__info">
+                                        <div class="offplan-list__meta">
+                                            <i class="bi bi-geo-alt offplan-list__meta-icon" aria-hidden="true"></i>
+                                            <span>Apartments</span>
+                                            <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
+                                            <span>Downtown Dubai</span>
+                                        </div>
+                                        <h3 class="offplan-list__name">Skyline Residences</h3>
+                                    </div>
+
+                                    <div class="offplan-list__action">
+                                        <span class="offplan-list__price">Price to be confirmed</span>
+                                        <span class="offplan-list__circle-btn" aria-hidden="true">
+                                            <svg class="offplan-list__circle-svg" width="42" height="42"
+                                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="offplan-list__circle-ring" cx="20.6817" cy="20.6817"
+                                                    r="17.5" stroke="currentColor" />
+                                                <path class="offplan-list__circle-arrow"
+                                                    d="M25.4448 18.8041L13.5857 28.549L11.9856 26.6017L23.8447 16.8569L14.321 15.9248L14.5825 13.4177L28.3886 14.7688L27.0231 28.5573L24.5128 28.3278L25.4448 18.8041Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Project Item 3 -->
+                            <li class="offplan-list__item" data-offplan-trigger="2">
+                                <a href="#garden-villas" class="offplan-list__link">
+                                    <div class="offplan-list__info">
+                                        <div class="offplan-list__meta">
+                                            <i class="bi bi-geo-alt offplan-list__meta-icon" aria-hidden="true"></i>
+                                            <span>Villas</span>
+                                            <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
+                                            <span>Dubai Hills Estate</span>
+                                        </div>
+                                        <h3 class="offplan-list__name">Garden Villas</h3>
+                                    </div>
+
+                                    <div class="offplan-list__action">
+                                        <span class="offplan-list__price">Price to be confirmed</span>
+                                        <span class="offplan-list__circle-btn" aria-hidden="true">
+                                            <svg class="offplan-list__circle-svg" width="42" height="42"
+                                                viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="offplan-list__circle-ring" cx="20.6817" cy="20.6817"
+                                                    r="17.5" stroke="currentColor" />
+                                                <path class="offplan-list__circle-arrow"
+                                                    d="M25.4448 18.8041L13.5857 28.549L11.9856 26.6017L23.8447 16.8569L14.321 15.9248L14.5825 13.4177L28.3886 14.7688L27.0231 28.5573L24.5128 28.3278L25.4448 18.8041Z"
+                                                    fill="currentColor" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="offplan-section__footer">
+                            <a href="#all-projects" class="offplan-section__view-all">
+                                View All Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- =====================================================================
+     OFF-PLAN PROJECTS SECTION
+====================================================================== -->
+
+    <!-- =====================================================================
+     ABOUT / EDITORIAL SHOWCASE SECTION
+====================================================================== -->
+    <section class="about-showcase" id="about" aria-labelledby="aboutShowcaseHeading">
+        <!-- Full-Bleed Architectural Waterfront Background -->
+        <div class="about-showcase__backdrop" aria-hidden="true">
+            <img src="assets/images/about-showcase.webp" alt="" class="about-showcase__bg-image" loading="lazy" />
+        </div>
+
+        <!-- Right-Aligned Glassmorphic Content Card -->
+        <div class="container-xl about-showcase__container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-lg-7 col-xl-6">
+                    <div class="about-showcase__card">
+                        <h2 class="about-showcase__title" id="aboutShowcaseHeading">
+                            A Clearer Path to your next chapter.
+                        </h2>
+
+                        <p class="about-showcase__description">
+                            Whether you’re buying your first Dubai home or building a property
+                            portfolio, the right decision starts with understanding what matters to you.
+                            We help you compare locations, developers and payment plans — with a
+                            considered approach, not a one-size-fits-all recommendation.
+                        </p>
+
+                        <a href="#about-page" class="about-showcase__link">
+                            Get To Know Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =====================================================================
+     ABOUT / EDITORIAL SHOWCASE SECTION
+====================================================================== -->
+
+    <!-- =====================================================================
+     REAL ESTATE NEEDS / OWL CAROUSEL SECTION
+====================================================================== -->
+
+    <section class="portfolio-slider" id="properties-showcase" aria-labelledby="portfolio-slider-title">
+        <div class="site-container">
+            <header class="portfolio-slider__header">
+                <h2 class="portfolio-slider__title" id="portfolio-slider-title">We Cover All Your Real Estate Needs.
+                </h2>
+                <p class="portfolio-slider__subtitle">With a comprehensive portfolio of properties and countless offers,
+                </p>
+            </header>
+        </div>
+
+        <div class="portfolio-slider__stage" role="region" aria-roledescription="carousel"
+            aria-label="Featured properties">
+            <div class="owl-carousel portfolio-carousel" id="portfolio-carousel">
+                <div class="portfolio-carousel__slide">
+                    <div class="portfolio-carousel__card">
+                        <img class="portfolio-carousel__image" src="assets/images/portfolio-carousel__image-1.webp"
+                            alt="Modern luxury living room interior">
+                    </div>
+                </div>
+                <div class="portfolio-carousel__slide">
+                    <div class="portfolio-carousel__card">
+                        <img class="portfolio-carousel__image" src="assets/images/portfolio-carousel__image-1.webp"
+                            alt="Contemporary bright apartment lounge">
+                    </div>
+                </div>
+                <div class="portfolio-carousel__slide">
+                    <div class="portfolio-carousel__card">
+                        <img class="portfolio-carousel__image" src="assets/images/portfolio-carousel__image-1.webp"
+                            alt="Architectural villa living space">
+                    </div>
+                </div>
+                <div class="portfolio-carousel__slide">
+                    <div class="portfolio-carousel__card">
+                        <img class="portfolio-carousel__image" src="assets/images/portfolio-carousel__image-1.webp"
+                            alt="Waterfront residence interior">
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-slider__footer">
+                <div class="portfolio-slider__actions">
+                    <a class="portfolio-slider__action-link" href="buy.html">Buy</a>
+                    <a class="portfolio-slider__action-link" href="rent.html">Rent</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================================
+     REAL ESTATE NEEDS / OWL CAROUSEL SECTION
+====================================================================== -->
+
+    <!-- jQuery & Owl Carousel 2.3.4 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        crossorigin="anonymous"></script>
 
     <!-- Bootstrap 5.3.3 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -248,6 +527,85 @@
 
     <!-- Custom Vanilla JS -->
     <script src="assets/js/main.js"></script>
+
+
+    <script>
+        /* ------------------------------------------------------------------------
+        6. Off-Plan Projects Interactive Image Switcher
+        ------------------------------------------------------------------------ */
+        const offplanTriggers = document.querySelectorAll('[data-offplan-trigger]');
+        const offplanPreviews = document.querySelectorAll('[data-offplan-preview]');
+
+        if (offplanTriggers.length && offplanPreviews.length) {
+            const activateOffplanPreview = (index) => {
+                offplanTriggers.forEach((item) => {
+                    item.classList.toggle(
+                        'offplan-list__item--active',
+                        item.getAttribute('data-offplan-trigger') === index
+                    );
+                });
+
+                offplanPreviews.forEach((img) => {
+                    img.classList.toggle(
+                        'offplan-section__image--active',
+                        img.getAttribute('data-offplan-preview') === index
+                    );
+                });
+            };
+
+            offplanTriggers.forEach((trigger) => {
+                const index = trigger.getAttribute('data-offplan-trigger');
+                trigger.addEventListener('mouseenter', () => activateOffplanPreview(index));
+                trigger.addEventListener('focusin', () => activateOffplanPreview(index));
+            });
+        }
+    </script>
+
+    <script>
+        /* ------------------------------------------------------------------------
+     7. Real Estate Needs Owl Carousel & Buy/Rent Sync
+  ------------------------------------------------------------------------ */
+        /* ===== Portfolio slider (add to the end of main.js; needs jQuery + Owl Carousel 2.3.4 loaded first) ===== */
+        (() => {
+            'use strict';
+            const $ = window.jQuery;
+            const carousel = document.getElementById('portfolio-carousel');
+            if (!$ || !carousel || typeof $.fn.owlCarousel !== 'function') return;
+
+            const $carousel = $(carousel);
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Arrow glyph only; the pill is drawn by CSS. The previous arrow is this one mirrored in CSS.
+            const arrowIcon = '<svg viewBox="18 8 20 20" aria-hidden="true" focusable="false"><path d="M31.2355 18.7755H21.7877V17.2242H31.2355L27.0706 13.0593L28.1747 11.9692L34.2124 18.0068L28.1747 24.0305L27.0706 22.9404L31.2355 18.7755Z"/></svg>';
+
+            $carousel.owlCarousel({
+                center: true,
+                loop: true,
+                margin: 0,                                   // gap is slide padding in CSS
+                nav: true,
+                dots: false,
+                smartSpeed: 900,         // slower slide
+                fluidSpeed: 900,         // same speed when dragging
+                slideTransition: 'cubic-bezier(0.22, 0.61, 0.36, 1)',  // gentle ease-out
+                dragEndSpeed: 900,
+                mouseDrag: true,
+                touchDrag: true,
+                navElement: 'button type="button"',
+                navText: [arrowIcon, arrowIcon],
+                responsive: {                                // keep in sync with --portfolio-items in CSS
+                    0: { items: 1 },
+                    768: { items: 1.5 },
+                    992: { items: 1.84 },
+                    1024: { items: 1.80 },
+                    1200: { items: 1.80 },
+                    1400: { items: 1.80 },
+                }
+            });
+
+            $carousel.find('.owl-prev').attr('aria-label', 'Previous property');
+            $carousel.find('.owl-next').attr('aria-label', 'Next property');
+        })();
+    </script>
 </body>
 
 </html>
