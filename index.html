@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Crestbourne Properties LLC — Dubai Real Estate. Exceptional Places. Thoughtful Investments." />
+    <title>Crestbourne Properties LLC | Dubai Real Estate</title>
+
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Custom Modular CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+</head>
+
+<body class="page-home">
+
+    <!-- =====================================================================
+       SITE HEADER & NAVIGATION
+  ====================================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container-xl site-header__container">
+            <nav class="site-navigation" aria-label="Primary Navigation">
+
+                <!-- Brand Logo -->
+                <!-- Brand Logo -->
+                <a href="index.html" class="site-header__logo" aria-label="Crestbourne Properties LLC Home">
+                    <img src="assets/images/logo/crestbourne-white-logo.webp" alt="Crestbourne Properties LLC"
+                        class="site-header__logo-image" />
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="site-navigation__toggle" type="button" id="mobileMenuToggle"
+                    aria-controls="primaryNavMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span class="site-navigation__toggle-line"></span>
+                    <span class="site-navigation__toggle-line"></span>
+                    <span class="site-navigation__toggle-line"></span>
+                </button>
+
+                <!-- Navigation Menu Wrapper -->
+                <div class="site-navigation__menu" id="primaryNavMenu">
+                    <ul class="site-navigation__list">
+                        <li class="site-navigation__item">
+                            <a href="index.html" class="site-navigation__link site-navigation__link--active"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#about" class="site-navigation__link">About</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#off-plan" class="site-navigation__link">Off-Plan Projects</a>
+                        </li>
+
+                        <!-- Properties Dropdown Item -->
+                        <li class="site-navigation__item site-navigation__item--has-dropdown" data-dropdown>
+                            <button type="button" class="site-navigation__link site-navigation__dropdown-trigger"
+                                id="propertiesDropdownBtn" aria-expanded="false" aria-haspopup="true"
+                                aria-controls="propertiesDropdownMenu">
+                                <span>Properties</span>
+                                <i class="bi bi-chevron-down site-navigation__chevron" aria-hidden="true"></i>
+                            </button>
+
+                            <ul class="site-navigation__dropdown" id="propertiesDropdownMenu"
+                                aria-labelledby="propertiesDropdownBtn">
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#buy-properties" class="site-navigation__dropdown-link">Buy Properties</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#rent-properties" class="site-navigation__dropdown-link">Rent
+                                        Properties</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#luxury-villas" class="site-navigation__dropdown-link">Luxury Villas</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#penthouses" class="site-navigation__dropdown-link">Waterfront
+                                        Penthouses</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#commercial" class="site-navigation__dropdown-link">Commercial Spaces</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-navigation__item">
+                            <a href="#communities" class="site-navigation__link">Communities</a>
+                        </li>
+                        <li class="site-navigation__item">
+                            <a href="#contact" class="site-navigation__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile-only CTA inside drawer -->
+                    <div class="site-navigation__mobile-cta">
+                        <a href="#contact" class="btn-crestbourne btn-crestbourne--pill">
+                            <span>Get In Touch</span>
+                            <svg width="11" height="11" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2015_346)">
+                                    <path
+                                        d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                        fill="#C1A470" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2015_346">
+                                        <rect width="10" height="10" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Header CTA -->
+                <div class="site-header__actions">
+                    <a href="#contact" class="btn-crestbourne btn-crestbourne--pill">
+                        <span>Get In Touch</span>
+                        <svg width="11" height="11" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2015_346)">
+                                <path
+                                    d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                    fill="#C1A470" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2015_346">
+                                    <rect width="10" height="10" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+       MAIN CONTENT - HERO SECTION (FIRST SECTION)
+  ====================================================================== -->
+    <main id="mainContent">
+        <section class="hero-section" aria-labelledby="heroHeading">
+            <!-- Architectural Hero Background -->
+            <div class="hero-section__backdrop" aria-hidden="true">
+                <img src="assets/images/hero-section__bg-image.webp" alt="" class="hero-section__bg-image"
+                    fetchpriority="high" />
+                <div class="hero-section__overlay"></div>
+            </div>
+
+            <!-- Hero Content Container -->
+            <div class="container-xl hero-section__container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-10 col-xl-10">
+                        <div class="hero-section__content">
+                            <p class="hero-section__eyebrow">Dubai Real Estate. New Perspective</p>
+
+                            <h1 class="hero-section__title" id="heroHeading">
+                                Exceptional Places.<br />
+                                Thoughtful Investments
+                            </h1>
+
+                            <!-- Hero Media Pill & Underlined Link -->
+                            <div class="hero-section__actions">
+                                <button type="button" class="media-pill" id="heroVideoTrigger"
+                                    aria-label="Play Dubai Real Estate Showcase Video"
+                                    data-video-src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-11-large.mp4">
+                                    <img src="assets/images/dubai-media-pill.webp" alt="Dubai Skyline Architecture"
+                                        class="media-pill__image" />
+                                    <span class="media-pill__overlay" aria-hidden="true"></span>
+                                    <span class="media-pill__play-btn" aria-hidden="true">
+                                        <img src="assets/images/icons/play-icon.png" alt=""
+                                            class="media-pill__play-icon" />
+                                    </span>
+                                </button>
+
+                                <a href="#off-plan" class="hero-section__link">
+                                    Explore Off-Plan Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom-Right Circular "Speak To An Advisor" Badge -->
+            <a href="#contact" class="advisor-badge" aria-label="Speak to an advisor">
+                <!-- Rotating Circular Text Ring -->
+                <svg class="advisor-badge__ring" viewBox="0 0 160 160" aria-hidden="true">
+                    <defs>
+                        <path id="advisorTextCircle" d="M 80, 80 m -58, 0 a 58,58 0 1,1 116,0 a 58,58 0 1,1 -116,0" />
+                    </defs>
+                    <text class="advisor-badge__text">
+                        <textPath href="#advisorTextCircle" startOffset="0%">
+                            SPEAK TO AN ADVISOR • SPEAK TO AN ADVISOR •
+                        </textPath>
+                    </text>
+                </svg>
+
+                <!-- Your Exact Figma Arrow SVG -->
+                <span class="advisor-badge__center" aria-hidden="true">
+                    <svg class="advisor-badge__arrow-svg" width="36" height="36" viewBox="75 75 46 46" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M106.106 95.46L85.0681 107.643L83.0677 104.188L104.106 92.0055L89.4611 88.1018L90.514 84.2506L111.744 89.9097L106.067 111.108L102.203 110.105L106.106 95.46Z"
+                            fill="currentColor" />
+                    </svg>
+                </span>
+            </a>
+        </section>
+    </main>
+
+    <!-- =====================================================================
+       LIGHTBOX MODAL FOR HERO SHOWCASE VIDEO
+  ====================================================================== -->
+    <div class="video-lightbox" id="videoLightbox" role="dialog" aria-modal="true" aria-label="Property Showcase Video"
+        hidden>
+        <div class="video-lightbox__backdrop" data-close-lightbox></div>
+        <div class="video-lightbox__dialog">
+            <button type="button" class="video-lightbox__close" id="closeVideoLightbox" aria-label="Close video modal">
+                <i class="bi bi-x-lg" aria-hidden="true"></i>
+            </button>
+            <div class="video-lightbox__frame">
+                <video id="showcaseVideoPlayer" class="video-lightbox__player" controls playsinline>
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3.3 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Vanilla JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
