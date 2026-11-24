@@ -59,7 +59,7 @@
 .hero-section__eyebrow {
     margin: 0 0 1.25rem;
     font-family: var(--font-primary);
-    font-size: 0.88rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -166,7 +166,7 @@
     display: inline-block;
     padding-bottom: 0rem;
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: var(--fw-regular);
     color: var(--color-white);
     text-decoration: underline;
@@ -208,7 +208,6 @@
     }
 
     .hero-section__eyebrow {
-        font-size: 0.7rem;
         letter-spacing: 0.18em;
         margin-bottom: 1rem;
     }
@@ -282,7 +281,7 @@
     fill: var(--color-white-muted);
     font-family: var(--font-primary);
     font-size: 10.2px;
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-regular);
     letter-spacing: 2.3px;
     text-transform: uppercase;
 }
@@ -302,8 +301,8 @@
 
 .advisor-badge__arrow-svg,
 .advisor-badge__arrow-icon {
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
     display: block;
     transition: filter var(--transition-base), transform var(--transition-base);
@@ -339,17 +338,17 @@
 
     .advisor-badge__arrow-svg,
     .advisor-badge__arrow-icon {
-        width: 28px;
-        height: 28px;
+        width: 36px;
+        height: 36px;
     }
 }
 
 @media (max-width: 575.98px) {
     .advisor-badge {
-        width: 112px;
-        height: 112px;
+        width: 100px;
+        height: 100px;
         right: 1.25rem;
-        bottom: 1.25rem;
+        bottom: 2rem;
     }
 
     .advisor-badge__center {
@@ -359,8 +358,8 @@
 
     .advisor-badge__arrow-svg,
     .advisor-badge__arrow-icon {
-        width: 24px;
-        height: 24px;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -439,10 +438,6 @@
 /* ==========================================================================
    OFF-PLAN PROJECTS SECTION
    ========================================================================== */
-/* ==========================================================================
-   OFF-PLAN PROJECTS SECTION
-   ========================================================================== */
-
 .offplan-section {
     background-color: #FAF9F6;
     color: var(--color-text);
@@ -463,7 +458,7 @@
 .offplan-section__eyebrow {
     margin: 0 0 0.9rem;
     font-family: var(--font-primary);
-    font-size: 0.88rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -483,7 +478,7 @@
 .offplan-section__subtitle {
     margin: 0;
     font-family: var(--font-primary);
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     color: var(--color-text);
 }
@@ -537,9 +532,8 @@
 
 .offplan-list__link {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.65rem;
     padding: 2.5rem 0;
     color: var(--color-secondary);
     transition: padding-left var(--transition-base);
@@ -555,24 +549,33 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.45rem;
-    margin-bottom: 0.55rem;
+    margin-bottom: 0;
     font-family: var(--font-primary);
-    font-size: 0.88rem;
+    font-size: clamp(0.85rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     color: var(--color-secondary);
 }
 
 .offplan-list__meta-icon {
-    font-size: 0.85rem;
+    width: 17px;
     color: var(--color-secondary);
+}
+
+/* Bottom Row: Baseline-Aligned Title & Action Group */
+.offplan-list__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .offplan-list__name {
     margin: 0;
     font-family: var(--font-secondary);
-    font-size: clamp(1.5rem, 2.3vw, 2.05rem);
+    font-size: clamp(1.5rem, 2.3vw, 2.2rem);
     font-weight: var(--fw-semibold);
-    line-height: 1.2;
+    line-height: 1.1;
     color: var(--color-secondary);
     letter-spacing: -0.48px;
     transition: color var(--transition-base);
@@ -594,6 +597,7 @@
     font-family: var(--font-primary);
     font-size: 0.98rem;
     font-weight: var(--fw-regular);
+    line-height: 1.1;
     color: var(--color-secondary);
 }
 
@@ -649,7 +653,7 @@
     display: inline-block;
     padding-bottom: 0rem;
     font-family: var(--font-primary);
-    font-size: 0.87rem;
+    font-size: 0.875rem;
     font-weight: var(--fw-semibold);
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -695,15 +699,19 @@
     }
 
     .offplan-list__link {
+        padding: 1.5rem 0;
+    }
+
+    .offplan-list__row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem 0;
+        gap: 0.85rem;
     }
 
     .offplan-list__action {
         width: 100%;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
@@ -760,7 +768,7 @@
 .about-showcase__title {
     margin: 0 0 1.35rem;
     font-family: var(--font-secondary);
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-size: clamp(1.56rem, 3.2vw, 2rem);
     font-weight: var(--fw-regular);
     line-height: 1.15;
     letter-spacing: -0.64px;
@@ -770,7 +778,7 @@
 .about-showcase__description {
     margin: 0 0 2.15rem;
     font-family: var(--font-primary);
-    font-size: 0.96rem;
+    font-size: clamp(0.875rem, 3.2vw, 1rem);
     font-weight: var(--fw-regular);
     line-height: 1.72;
     color: var(--color-white-muted);
@@ -780,7 +788,7 @@
     display: inline-block;
     padding-bottom: 0.35rem;
     font-family: var(--font-primary);
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     letter-spacing: 0.02em;
     color: var(--color-white);
@@ -879,7 +887,7 @@
 
 .portfolio-slider__subtitle {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.875rem);
     font-weight: var(--fw-medium);
     color: var(--color-primary);
 }
@@ -1008,7 +1016,7 @@
     }
 
     .portfolio-slider__header {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     .portfolio-slider__stage {
@@ -1017,12 +1025,10 @@
 
     .portfolio-carousel .owl-nav button.owl-prev {
         left: .75rem;
-        background-color: var(--color-surface);
     }
 
     .portfolio-carousel .owl-nav button.owl-next {
         right: .75rem;
-        background-color: var(--color-surface);
     }
 
     .portfolio-carousel .owl-nav button.owl-prev:hover,
@@ -1032,6 +1038,12 @@
 }
 
 @media (max-width: 767.98px) {
+
+    .portfolio-carousel .owl-nav button.owl-prev,
+    .portfolio-carousel .owl-nav button.owl-next {
+        top: -8%;
+    }
+
     .portfolio-slider {
         --portfolio-items: 1;
         --portfolio-gap: 1rem;
@@ -1046,6 +1058,800 @@
     }
 }
 
+@media (max-width: 511px) {
+
+    .portfolio-carousel .owl-nav button.owl-prev,
+    .portfolio-carousel .owl-nav button.owl-next {
+        top: -11%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .portfolio-carousel .owl-nav button.owl-prev,
+    .portfolio-carousel .owl-nav button.owl-next {
+        top: -13%;
+    }
+}
+
 /* ==========================================================================
    REAL ESTATE NEEDS / OWL CAROUSEL SECTION
+   ========================================================================== */
+
+
+/* ==========================================================================
+   COMMUNITIES SHOWCASE SECTION ("MORE THAN AN ADDRESS")
+   ========================================================================== */
+
+.communities-section {
+    position: relative;
+    padding: 6.5rem 0 7rem;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.communities-section__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.communities-section__bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.communities-section__overlay {
+    position: absolute;
+    inset: 0;
+    /* background:
+        radial-gradient(circle at 50% 42%,
+            rgba(32, 52, 64, 0.58) 0%,
+            rgba(26, 41, 51, 0.92) 85%),
+        linear-gradient(180deg,
+            rgba(26, 41, 51, 0.85) 0%,
+            rgba(26, 41, 51, 0.72) 50%,
+            rgba(26, 41, 51, 0.94) 100%); */
+}
+
+.communities-section__container {
+    position: relative;
+    z-index: 2;
+    max-width: var(--container-width);
+}
+
+/* Centered Section Header */
+.communities-section__header {
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto 3.5rem;
+}
+
+.communities-section__eyebrow {
+    margin: 0 0 0.9rem;
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.communities-section__title {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-size: clamp(2.15rem, 4.75vw, 5.9rem);
+    font-weight: var(--fw-regular);
+    line-height: 1.15;
+    letter-spacing: -1.44px;
+    color: var(--color-white);
+}
+
+/* Community Card with Overlapping Transparent Architectural Cutout */
+.community-card {
+    position: relative;
+    height: 100%;
+}
+
+.community-card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.community-card__visual {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 330px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: -10px;
+    pointer-events: none;
+}
+
+.community-card--featured .community-card__visual {
+    height: 460px;
+}
+
+.community-card__cutout {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 18px 28px rgba(10, 20, 30, 0.45));
+    transition: transform var(--transition-smooth);
+}
+
+.community-card__link:hover .community-card__cutout,
+.community-card__link:focus-visible .community-card__cutout {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* Dark Slate Bottom Panel */
+.community-card__panel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 2.35rem 2rem 2rem;
+    background: rgba(1, 25, 49, 0.67);
+    backdrop-filter: blur(2px);
+    text-align: center;
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.community-card__link:hover .community-card__panel,
+.community-card__link:focus-visible .community-card__panel {
+    /* background-color: var(--color-secondary); */
+    /* border-color: rgba(193, 164, 112, 0.35); */
+}
+
+.community-card__name {
+    margin: 0 0 1.25rem;
+    font-family: var(--font-secondary);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+    color: var(--color-white);
+    transition: color var(--transition-base);
+}
+
+.community-card__link:hover .community-card__name {
+    color: var(--color-primary);
+}
+
+.community-card__divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto 1.15rem;
+    background-color: rgba(255, 255, 255, 0.32);
+    transition: background-color var(--transition-base);
+}
+
+.community-card__link:hover .community-card__divider {
+    background-color: var(--color-primary);
+}
+
+.community-card__cta {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: color var(--transition-base), transform var(--transition-base);
+}
+
+.community-card__link:hover .community-card__cta {
+    color: var(--color-white);
+}
+
+/* Communities Section Responsive Overrides */
+@media (max-width: 1199.98px) {
+    .community-card__visual {
+        height: 290px;
+    }
+
+    .community-card--featured .community-card__visual {
+        height: 340px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .communities-section {
+        padding: 4.5rem 0 5rem;
+    }
+
+    .communities-section__header {
+        margin-bottom: 2.75rem;
+    }
+
+    .community-card__visual,
+    .community-card--featured .community-card__visual {
+        height: 280px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .communities-section {
+        padding: 3.75rem 0 4.25rem;
+    }
+
+    .community-card__visual,
+    .community-card--featured .community-card__visual {
+        height: 240px;
+    }
+
+    .community-card__panel {
+        padding: 2rem 1.5rem 1.75rem;
+    }
+}
+
+/* ==========================================================================
+   COMMUNITIES SHOWCASE SECTION ("MORE THAN AN ADDRESS")
+   ========================================================================== */
+
+
+/* ==========================================================================
+   CLIENT TESTIMONIALS SECTION ("WHAT CLIENTS SAY")
+   ========================================================================== */
+
+.testimonials-section {
+    background-color: #F8F7F4;
+    color: var(--color-text);
+    padding: 6.5rem 0;
+    overflow: hidden;
+}
+
+.testimonials-section__container {
+    max-width: var(--container-width);
+}
+
+/* Left Column: Rating Summary + Vertical Gold Divider */
+.testimonials-section__summary {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2.5rem;
+}
+
+.testimonials-section__summary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.testimonials-section__eyebrow {
+    margin: 0 0 1.25rem;
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.testimonials-section__score {
+    margin: 0 0 1rem;
+    font-family: var(--font-primary);
+    font-size: clamp(3.5rem, 6vw, 5.25rem);
+    font-weight: var(--fw-regular);
+    line-height: 1;
+    letter-spacing: -1.92px;
+    color: var(--color-secondary);
+}
+
+.testimonials-section__stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.65rem;
+    /* color: var(--color-primary);
+  font-size: 1.05rem; */
+}
+
+.testimonials-section__count {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-weight: var(--fw-regular);
+    color: var(--color-secondary);
+}
+
+/* Right Column: Slider Wrapper & Gold Quote Icon */
+.testimonials-section__slider-wrapper {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.testimonials-section__quote-mark {
+    margin-bottom: 1.75rem;
+    color: var(--color-primary);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    margin: 0;
+}
+
+.testimonial-card__quote {
+    margin: 0 0 2.75rem;
+    font-family: var(--font-secondary);
+    font-size: clamp(1.45rem, 2.7vw, 2.55rem);
+    font-weight: var(--fw-regular);
+    line-height: 1.24;
+    letter-spacing: -0.015em;
+    color: var(--color-secondary);
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding-right: 8.5rem;
+    /* Keeps clear space for bottom-right pill arrows */
+}
+
+/* Overrides Owl Carousel's default `.owl-carousel .owl-item img { width: 100%; }` */
+.testimonials-carousel .owl-item .testimonial-card__avatar {
+    display: block;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    max-width: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonial-card__author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.testimonial-card__name {
+    font-family: var(--font-secondary);
+    font-style: normal;
+    font-size: clamp(0.90rem, 1.8vw, 1.125rem);
+    font-weight: var(--fw-semibold);
+    color: var(--color-secondary);
+}
+
+.testimonial-card__role {
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 1.5vw, 0.8125rem);
+    font-weight: var(--fw-regular);
+    color: var(--color-primary);
+}
+
+/* Bottom-Right Pill Navigation Arrows */
+.testimonials-carousel .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0.45rem;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    z-index: 5;
+}
+
+.testimonials-carousel .owl-nav button.owl-prev,
+.testimonials-carousel .owl-nav button.owl-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.4rem;
+    height: 2.25rem;
+    margin: 0;
+    border: 1px solid #DDDDDD;
+    border-radius: var(--radius-pill);
+    color: var(--color-secondary);
+    transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.testimonials-carousel .owl-nav button.owl-prev:hover,
+.testimonials-carousel .owl-nav button.owl-next:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.testimonials-carousel .owl-nav svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: currentColor;
+}
+
+.testimonials-carousel .owl-nav button.owl-prev svg {
+    transform: scaleX(1);
+}
+
+.testimonials-carousel .owl-nav button.owl-next svg {
+    transform: scaleX(-1);
+}
+
+/* Testimonials Section Responsive Overrides */
+@media (max-width: 991.98px) {
+    .testimonials-section {
+        padding: 4.5rem 0;
+    }
+
+    .testimonials-section__summary {
+        padding-right: 0;
+        padding-bottom: 2.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .testimonials-section__summary::after {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    .testimonials-section__slider-wrapper {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .testimonials-section {
+        padding: 3.75rem 0;
+    }
+
+    .testimonial-card__quote {
+        margin-bottom: 2rem;
+    }
+
+    .testimonial-card__author {
+        padding-right: 0;
+        margin-bottom: 3.5rem;
+    }
+
+    .testimonials-carousel .owl-nav {
+        left: 0;
+        right: auto;
+        justify-content: center;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   CLIENT TESTIMONIALS SECTION ("WHAT CLIENTS SAY")
+   ========================================================================== */
+
+/* ==========================================================================
+   PROMPT CONSULTATION / LEAD CAPTURE SECTION
+   ========================================================================== */
+
+.consultation-section {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 5.5rem 0;
+}
+
+.consultation-section__container {
+    max-width: var(--container-width);
+}
+
+/* Centered Header */
+.consultation-section__header {
+    text-align: center;
+    max-width: 90rem;
+    margin: 0 auto 3.25rem;
+}
+
+.consultation-section__eyebrow {
+    margin: 0 0 0.9rem;
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.consultation-section__title {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-size: clamp(1.85rem, 3.3vw, 2.25rem);
+    font-weight: var(--fw-regular);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    color: var(--color-white);
+}
+
+/* Inline Pill Form */
+.consultation-form {
+    /* max-width: 1140px; */
+    margin: 0 auto;
+}
+
+.consultation-form__fields {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.consultation-form__group {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.consultation-form__input {
+    width: 100%;
+    height: 56px;
+    padding: 0 1.75rem;
+    font-family: var(--font-primary);
+    font-size: 0.92rem;
+    font-weight: var(--fw-regular);
+    color: var(--color-white);
+    background-color: #131E26;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-pill);
+    transition: border-color var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.consultation-form__input::placeholder {
+    color: var(--color-white-muted);
+    opacity: 0.9;
+}
+
+.consultation-form__input:hover {
+    border-color: rgba(193, 164, 112, 0.35);
+}
+
+.consultation-form__input:focus {
+    outline: none;
+    background-color: var(--color-dark);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-tint);
+}
+
+/* Circular Gold Outline Submit Button */
+.consultation-form__submit {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    background-color: rgba(19, 30, 38, 0);
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
+}
+
+.consultation-form__submit:hover,
+.consultation-form__submit:focus-visible {
+    background-color: var(--color-primary);
+    transform: translateX(2px);
+}
+
+.consultation-form__submit:hover svg path {
+    fill: var(--color-dark);
+}
+
+/* Bottom WhatsApp Prompt */
+.consultation-section__whatsapp {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.consultation-section__whatsapp-text {
+    font-family: var(--font-primary);
+    font-size: clamp(0.90rem, 1.8vw, 1.125rem);
+    font-weight: var(--fw-regular);
+    color: var(--color-white-muted);
+}
+
+.consultation-section__whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-size: 1.45rem;
+    line-height: 1;
+    transition: color var(--transition-base), transform var(--transition-base);
+}
+
+.consultation-section__whatsapp-link:hover,
+.consultation-section__whatsapp-link:focus-visible {
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+/* Consultation Section Responsive Overrides */
+@media (max-width: 991.98px) {
+    .consultation-section {
+        padding: 4.5rem 0;
+    }
+
+    .consultation-form__fields {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .consultation-form__group {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .consultation-section {
+        padding: 3.75rem 0;
+    }
+
+    .consultation-section__header {
+        margin-bottom: 2.25rem;
+    }
+
+    .consultation-form__fields {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .consultation-form__group {
+        flex: 1 1 100%;
+    }
+
+    .consultation-form__submit {
+        align-self: center;
+        margin-top: 0.35rem;
+    }
+}
+
+/* ==========================================================================
+   PROMPT CONSULTATION / LEAD CAPTURE SECTION
+   ========================================================================== */
+
+
+/* ==========================================================================
+   BOTTOM CTA BANNER ("YOUR GOALS. OUR STARTING POINT")
+   ========================================================================== */
+
+.cta-banner {
+    background-color: #FAF9F6;
+    color: var(--color-text);
+    padding: 5.5rem 0;
+    border-top: 1px solid rgba(29, 42, 51, 0.08);
+}
+
+.cta-banner__container {
+    max-width: var(--container-width);
+}
+
+.cta-banner__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.cta-banner__content {
+    max-width: 100rem;
+}
+
+.cta-banner__eyebrow {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-primary);
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.cta-banner__title {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-size: clamp(2.15rem, 4.5vw, 4.5rem);
+    font-weight: var(--fw-regular);
+    line-height: 1.08;
+    letter-spacing: -1.44px;
+    color: var(--color-secondary);
+}
+
+.cta-banner__action {
+    flex-shrink: 0;
+    padding-bottom: 0.35rem;
+}
+
+/* Dark Slate Pill Button with Gold Label & Diagonal Arrow */
+.cta-banner__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    padding: 1.15rem 2.15rem;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    font-family: var(--font-primary);
+    font-size: clamp(0.84rem, 1.4vw, 0.92rem);
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.01em;
+    color: var(--color-primary);
+    transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base), transform var(--transition-base);
+}
+
+.cta-banner__btn:hover svg path {
+    fill: var(--color-dark);
+    font-size: 0.9rem;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.cta-banner__btn:hover,
+.cta-banner__btn:focus-visible {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-dark);
+    /* transform: translateY(-2px); */
+}
+
+.cta-banner__btn:hover i,
+.cta-banner__btn:focus-visible i {
+    transform: translate(2px, -2px);
+}
+
+/* CTA Banner Responsive Overrides */
+@media (max-width: 991.98px) {
+    .cta-banner {
+        padding: 4.5rem 0;
+    }
+
+    .cta-banner__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cta-banner__action {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cta-banner {
+        padding: 3.75rem 0;
+    }
+
+    .cta-banner__title {
+        letter-spacing: -0.8px;
+    }
+
+    .cta-banner__btn {
+        padding: 1rem 1.85rem;
+    }
+}
+
+/* ==========================================================================
+   BOTTOM CTA BANNER ("YOUR GOALS. OUR STARTING POINT")
    ========================================================================== */
