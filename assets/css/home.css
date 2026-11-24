@@ -439,7 +439,7 @@
    OFF-PLAN PROJECTS SECTION
    ========================================================================== */
 .offplan-section {
-    background-color: #FAF9F6;
+    background-color: #F8F7F4;
     color: var(--color-text);
     padding: 6rem 0;
 }
@@ -1737,7 +1737,7 @@
    ========================================================================== */
 
 .cta-banner {
-    background-color: #FAF9F6;
+    background-color: #F8F7F4;
     color: var(--color-text);
     padding: 5.5rem 0;
     border-top: 1px solid rgba(29, 42, 51, 0.08);

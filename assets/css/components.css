@@ -396,8 +396,7 @@
    ========================================================================== */
 
 .value-strip {
-  background-color: var(--color-white);
-  border-bottom: 1px solid rgba(29, 42, 51, 0.08);
+  background-color: var(--color-white); 
   padding: 1.1rem 0;
 }
 
