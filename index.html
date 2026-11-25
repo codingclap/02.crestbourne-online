@@ -14,11 +14,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet" />
-
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href=" assets/css/owl.theme.default.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href=" assets/css/owl.theme.default.min.css" />
     <!-- Custom Modular CSS -->
     <link rel="stylesheet" href="assets/css/variables.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -29,48 +29,57 @@
 <body class="page-home">
 
     <!-- =====================================================================
-       SITE HEADER & NAVIGATION
-  ====================================================================== -->
+     SITE HEADER & NAVIGATION
+====================================================================== -->
     <header class="site-header" id="siteHeader">
         <div class="container-xl site-header__container">
             <nav class="site-navigation" aria-label="Primary Navigation">
 
                 <!-- Brand Logo -->
-                <!-- Brand Logo -->
-                <a href="index.html" class="site-header__logo" aria-label="Crestbourne Properties LLC Home">
+                <a href="index.html" class="site-header__logo" aria-label="Crestbourne Properties LLC Home"
+                    data-aos="fade-down" data-aos-duration="700">
                     <img src="assets/images/logo/crestbourne-white-logo.webp" alt="Crestbourne Properties LLC"
                         class="site-header__logo-image" />
                 </a>
 
                 <!-- Mobile Menu Toggle -->
                 <button class="site-navigation__toggle" type="button" id="mobileMenuToggle"
-                    aria-controls="primaryNavMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                    aria-controls="primaryNavMenu" aria-expanded="false" aria-label="Toggle navigation menu"
+                    data-aos="fade-down" data-aos-duration="700" data-aos-delay="100">
                     <span class="site-navigation__toggle-line"></span>
                     <span class="site-navigation__toggle-line"></span>
                     <span class="site-navigation__toggle-line"></span>
                 </button>
 
-                <!-- Navigation Menu Wrapper -->
+                <!-- Navigation Menu Wrapper (No data-aos on wrapper so mobile drawer translateX stays intact) -->
                 <div class="site-navigation__menu" id="primaryNavMenu">
                     <ul class="site-navigation__list">
-                        <li class="site-navigation__item">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="50">
                             <a href="index.html" class="site-navigation__link site-navigation__link--active"
                                 aria-current="page">Home</a>
                         </li>
-                        <li class="site-navigation__item">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="100">
                             <a href="#about" class="site-navigation__link">About</a>
                         </li>
-                        <li class="site-navigation__item">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="150">
                             <a href="#off-plan" class="site-navigation__link">Off-Plan Projects</a>
                         </li>
 
                         <!-- Properties Dropdown Item -->
-                        <li class="site-navigation__item site-navigation__item--has-dropdown" data-dropdown>
+                        <li class="site-navigation__item site-navigation__item--has-dropdown" data-dropdown
+                            data-aos="fade-down" data-aos-duration="650" data-aos-delay="200">
                             <button type="button" class="site-navigation__link site-navigation__dropdown-trigger"
                                 id="propertiesDropdownBtn" aria-expanded="false" aria-haspopup="true"
                                 aria-controls="propertiesDropdownMenu">
                                 <span>Properties</span>
-                                <i class="bi bi-chevron-down site-navigation__chevron" aria-hidden="true"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
                             </button>
 
                             <ul class="site-navigation__dropdown" id="propertiesDropdownMenu"
@@ -95,10 +104,12 @@
                             </ul>
                         </li>
 
-                        <li class="site-navigation__item">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="250">
                             <a href="#communities" class="site-navigation__link">Communities</a>
                         </li>
-                        <li class="site-navigation__item">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="300">
                             <a href="#contact" class="site-navigation__link">Contact</a>
                         </li>
                     </ul>
@@ -109,13 +120,13 @@
                             <span>Get In Touch</span>
                             <svg width="11" height="11" viewBox="0 0 10 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2015_346)">
+                                <g clip-path="url(#clip0_2015_346_mobile)">
                                     <path
                                         d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
                                         fill="#C1A470" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_2015_346">
+                                    <clipPath id="clip0_2015_346_mobile">
                                         <rect width="10" height="10" fill="white" />
                                     </clipPath>
                                 </defs>
@@ -125,22 +136,21 @@
                 </div>
 
                 <!-- Desktop Header CTA -->
-                <div class="site-header__actions">
+                <div class="site-header__actions" data-aos="fade-down" data-aos-duration="700" data-aos-delay="350">
                     <a href="#contact" class="btn-crestbourne btn-crestbourne--pill">
                         <span>Get In Touch</span>
                         <svg width="11" height="11" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_2015_346)">
+                            <g clip-path="url(#clip0_2015_346_desktop)">
                                 <path
                                     d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
                                     fill="#C1A470" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2015_346">
+                                <clipPath id="clip0_2015_346_desktop">
                                     <rect width="10" height="10" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
-
                     </a>
                 </div>
 
@@ -153,7 +163,7 @@
   ====================================================================== -->
     <main id="mainContent">
         <section class="hero-section" aria-labelledby="heroHeading">
-            <!-- Architectural Hero Background -->
+            <!-- Architectural Hero Background (Kept static without AOS so it never flashes or shifts) -->
             <div class="hero-section__backdrop" aria-hidden="true">
                 <img src="assets/images/hero-section__bg-image.webp" alt="" class="hero-section__bg-image"
                     fetchpriority="high" />
@@ -165,15 +175,17 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-10 col-xl-10">
                         <div class="hero-section__content">
-                            <p class="hero-section__eyebrow">Dubai Real Estate. New Perspective</p>
+                            <p class="hero-section__eyebrow" data-aos="fade-up" data-aos-delay="100">
+                                Dubai Real Estate. New Perspective
+                            </p>
 
-                            <h1 class="hero-section__title" id="heroHeading">
+                            <h1 class="hero-section__title" id="heroHeading" data-aos="fade-up" data-aos-delay="250">
                                 Exceptional Places.<br />
                                 Thoughtful Investments
                             </h1>
 
                             <!-- Hero Media Pill & Underlined Link -->
-                            <div class="hero-section__actions">
+                            <div class="hero-section__actions" data-aos="fade-up" data-aos-delay="400">
                                 <button type="button" class="media-pill" id="heroVideoTrigger"
                                     aria-label="Play Dubai Real Estate Showcase Video"
                                     data-video-src="https://themarketingsocials.com/wp-content/themes/themarketingsocials/assets/images/home-page/tms-showreel-mobile.mp4">
@@ -196,7 +208,8 @@
             </div>
 
             <!-- Bottom-Right Circular "Speak To An Advisor" Badge -->
-            <a href="#contact" class="advisor-badge" aria-label="Speak to an advisor">
+            <a href="#contact" class="advisor-badge" aria-label="Speak to an advisor" data-aos="zoom-in"
+                data-aos-delay="550">
                 <!-- Rotating Circular Text Ring -->
                 <svg class="advisor-badge__ring" viewBox="0 0 160 160" aria-hidden="true">
                     <defs>
@@ -234,8 +247,9 @@
         <div class="video-lightbox__backdrop" data-close-lightbox></div>
         <div class="video-lightbox__dialog">
             <button type="button" class="video-lightbox__close" id="closeVideoLightbox" aria-label="Close video modal">
-                <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
@@ -258,13 +272,13 @@
     <section class="value-strip" aria-label="Our Core Commitments">
         <div class="container-xl value-strip__container">
             <ul class="value-strip__list">
-                <li class="value-strip__item">
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="0">
                     <span class="value-strip__label">A Property That Fits Your Goals</span>
                 </li>
-                <li class="value-strip__item">
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="150">
                     <span class="value-strip__label">Clarity At Every Step</span>
                 </li>
-                <li class="value-strip__item">
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="300">
                     <span class="value-strip__label">A Relationship Beyond The Transaction</span>
                 </li>
             </ul>
@@ -283,11 +297,13 @@
 
             <!-- Section Header -->
             <header class="offplan-section__header">
-                <p class="offplan-section__eyebrow">A Look At What's Next</p>
-                <h2 class="offplan-section__title" id="offplanHeading">
+                <p class="offplan-section__eyebrow" data-aos="fade-up" data-aos-delay="0">
+                    A Look At What's Next
+                </p>
+                <h2 class="offplan-section__title" id="offplanHeading" data-aos="fade-up" data-aos-delay="120">
                     New Possibilities. In Remarkable Places.
                 </h2>
-                <p class="offplan-section__subtitle">
+                <p class="offplan-section__subtitle" data-aos="fade-up" data-aos-delay="240">
                     Explore a selection of off-plan living across Dubai's most sought-after communities
                 </p>
             </header>
@@ -297,7 +313,7 @@
 
                 <!-- Left Column: Featured Project Image Frame -->
                 <div class="col-12 col-lg-5">
-                    <div class="offplan-section__media">
+                    <div class="offplan-section__media" data-aos="fade-right" data-aos-delay="150">
                         <img src="assets/images/off-plan-waterfront-residences.webp"
                             alt="Waterfront Residences at Dubai Creek Harbour"
                             class="offplan-section__image offplan-section__image--active" data-offplan-preview="0" />
@@ -316,11 +332,12 @@
                         <ul class="offplan-list">
 
                             <!-- Project Item 1 -->
-                            <li class="offplan-list__item offplan-list__item--active" data-offplan-trigger="0">
+                            <li class="offplan-list__item offplan-list__item--active" data-offplan-trigger="0"
+                                data-aos="fade-up" data-aos-delay="150">
                                 <a href="#waterfront-residences" class="offplan-list__link">
                                     <div class="offplan-list__meta">
-                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg" />
-
+                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg"
+                                            alt="" />
                                         <span>Apartments</span>
                                         <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
                                         <span>Dubai Creek Harbour</span>
@@ -347,10 +364,12 @@
                             </li>
 
                             <!-- Project Item 2 -->
-                            <li class="offplan-list__item" data-offplan-trigger="1">
+                            <li class="offplan-list__item" data-offplan-trigger="1" data-aos="fade-up"
+                                data-aos-delay="280">
                                 <a href="#skyline-residences" class="offplan-list__link">
                                     <div class="offplan-list__meta">
-                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg" />
+                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg"
+                                            alt="" />
                                         <span>Apartments</span>
                                         <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
                                         <span>Downtown Dubai</span>
@@ -377,10 +396,12 @@
                             </li>
 
                             <!-- Project Item 3 -->
-                            <li class="offplan-list__item" data-offplan-trigger="2">
+                            <li class="offplan-list__item" data-offplan-trigger="2" data-aos="fade-up"
+                                data-aos-delay="410">
                                 <a href="#garden-villas" class="offplan-list__link">
                                     <div class="offplan-list__meta">
-                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg" />
+                                        <img class="offplan-list__meta-icon" src="assets/images/icons/location.svg"
+                                            alt="" />
                                         <span>Villas</span>
                                         <span class="offplan-list__meta-divider" aria-hidden="true">|</span>
                                         <span>Dubai Hills Estate</span>
@@ -408,7 +429,7 @@
 
                         </ul>
 
-                        <div class="offplan-section__footer">
+                        <div class="offplan-section__footer" data-aos="fade-up" data-aos-delay="500">
                             <a href="#all-projects" class="offplan-section__view-all">
                                 View All Projects
                             </a>
@@ -427,7 +448,7 @@
      ABOUT / EDITORIAL SHOWCASE SECTION
 ====================================================================== -->
     <section class="about-showcase" id="about" aria-labelledby="aboutShowcaseHeading">
-        <!-- Full-Bleed Architectural Waterfront Background -->
+        <!-- Full-Bleed Architectural Waterfront Background (Kept static so backdrop-filter blurs smoothly) -->
         <div class="about-showcase__backdrop" aria-hidden="true">
             <img src="assets/images/about-showcase.webp" alt="" class="about-showcase__bg-image" loading="lazy" />
         </div>
@@ -436,19 +457,20 @@
         <div class="container-xl about-showcase__container">
             <div class="row justify-content-end">
                 <div class="col-12 col-lg-7 col-xl-6">
-                    <div class="about-showcase__card">
-                        <h2 class="about-showcase__title" id="aboutShowcaseHeading">
+                    <div class="about-showcase__card" data-aos="fade-left" data-aos-delay="100">
+                        <h2 class="about-showcase__title" id="aboutShowcaseHeading" data-aos="fade-up"
+                            data-aos-delay="220">
                             A Clearer Path to your next chapter.
                         </h2>
 
-                        <p class="about-showcase__description">
+                        <p class="about-showcase__description" data-aos="fade-up" data-aos-delay="340">
                             Whether you’re buying your first Dubai home or building a property
                             portfolio, the right decision starts with understanding what matters to you.
                             We help you compare locations, developers and payment plans — with a
                             considered approach, not a one-size-fits-all recommendation.
                         </p>
 
-                        <a href="#about-page" class="about-showcase__link">
+                        <a href="#about-page" class="about-showcase__link" data-aos="fade-up" data-aos-delay="460">
                             Get To Know Us
                         </a>
                     </div>
@@ -467,15 +489,17 @@
     <section class="portfolio-slider" id="properties-showcase" aria-labelledby="portfolio-slider-title">
         <div class="site-container container-xl">
             <header class="portfolio-slider__header">
-                <h2 class="portfolio-slider__title" id="portfolio-slider-title">We Cover All Your Real Estate Needs.
+                <h2 class="portfolio-slider__title" id="portfolio-slider-title" data-aos="fade-up" data-aos-delay="0">
+                    We Cover All Your Real Estate Needs.
                 </h2>
-                <p class="portfolio-slider__subtitle">With a comprehensive portfolio of properties and countless offers,
+                <p class="portfolio-slider__subtitle" data-aos="fade-up" data-aos-delay="120">
+                    With a comprehensive portfolio of properties and countless offers,
                 </p>
             </header>
         </div>
 
         <div class="portfolio-slider__stage" role="region" aria-roledescription="carousel"
-            aria-label="Featured properties">
+            aria-label="Featured properties" data-aos="fade-up" data-aos-delay="220">
             <div class="owl-carousel portfolio-carousel" id="portfolio-carousel">
                 <div class="portfolio-carousel__slide">
                     <div class="portfolio-carousel__card">
@@ -503,7 +527,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-slider__footer">
+            <div class="portfolio-slider__footer" data-aos="fade-up" data-aos-delay="340">
                 <div class="portfolio-slider__actions">
                     <a class="portfolio-slider__action-link" href="buy.html">Buy</a>
                     <a class="portfolio-slider__action-link" href="rent.html">Rent</a>
@@ -530,8 +554,10 @@
         <!-- Section Content -->
         <div class="container-xl communities-section__container">
             <header class="communities-section__header">
-                <p class="communities-section__eyebrow">Find Your Kind Of Dubai</p>
-                <h2 class="communities-section__title" id="communitiesHeading">
+                <p class="communities-section__eyebrow" data-aos="fade-up" data-aos-delay="0">
+                    Find Your Kind Of Dubai
+                </p>
+                <h2 class="communities-section__title" id="communitiesHeading" data-aos="fade-up" data-aos-delay="120">
                     More Than An Address
                 </h2>
             </header>
@@ -541,7 +567,7 @@
 
                 <!-- Community Card 1: Dubai Creek Harbour -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="community-card">
+                    <article class="community-card" data-aos="fade-up" data-aos-delay="150">
                         <a href="#dubai-creek-harbour" class="community-card__link">
                             <div class="community-card__visual">
                                 <img src="assets/images/dubai-creek-harbour.webp"
@@ -560,7 +586,7 @@
 
                 <!-- Community Card 2: Downtown Dubai (Center Elevated Tower) -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="community-card community-card--featured">
+                    <article class="community-card community-card--featured" data-aos="fade-up" data-aos-delay="300">
                         <a href="#downtown-dubai" class="community-card__link">
                             <div class="community-card__visual">
                                 <img src="assets/images/downtown-dubai.webp" alt="Downtown Dubai Skyscrapers"
@@ -578,7 +604,7 @@
 
                 <!-- Community Card 3: Dubai Hills Estate -->
                 <div class="col-12 col-md-6 col-lg-4 mx-md-auto">
-                    <article class="community-card">
+                    <article class="community-card" data-aos="fade-up" data-aos-delay="450">
                         <a href="#dubai-hills-estate" class="community-card__link">
                             <div class="community-card__visual">
                                 <img src="assets/images/dubai-hills-estate.webp" alt="Dubai Hills Estate Luxury Villa"
@@ -610,7 +636,7 @@
 
                 <!-- Left Column: Overall Rating Summary -->
                 <div class="col-12 col-lg-4">
-                    <div class="testimonials-section__summary">
+                    <div class="testimonials-section__summary" data-aos="fade-right" data-aos-delay="100">
                         <p class="testimonials-section__eyebrow" id="testimonialsHeading">What Clients Say</p>
 
                         <div class="testimonials-section__score" aria-label="4.9 out of 5 rating">
@@ -678,7 +704,6 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-
                         </div>
 
                         <p class="testimonials-section__count">4.9/5 based on 2,500+ reviews</p>
@@ -687,7 +712,7 @@
 
                 <!-- Right Column: Owl Carousel Testimonials Slider -->
                 <div class="col-12 col-lg-8">
-                    <div class="testimonials-section__slider-wrapper">
+                    <div class="testimonials-section__slider-wrapper" data-aos="fade-left" data-aos-delay="220">
 
                         <!-- Decorative Gold Opening Quote Mark -->
                         <div class="testimonials-section__quote-mark" aria-hidden="true">
@@ -697,7 +722,6 @@
                                     d="M20.5235 29.2189C20.5235 26.5762 21.3973 24.445 23.1449 22.8253C24.381 21.6318 26.0007 20.758 28.004 20.2039C29.027 19.9481 29.9221 19.799 30.6893 19.7563V10.102C25.7023 10.102 21.3973 10.8905 17.7742 12.4676C14.6627 13.8742 12.1265 15.8349 10.1658 18.3497C8.5035 20.3957 7.28871 22.7613 6.52148 25.4466C5.88212 27.5778 5.56244 29.709 5.56244 31.8403V53.8982H30.6893V29.2189H20.5235ZM48.2717 29.2189C48.2717 27.5565 48.6127 26.086 49.2947 24.8073C49.9341 23.7417 50.7865 22.8253 51.8521 22.058C52.7046 21.4187 53.7063 20.9072 54.8571 20.5236C55.667 20.2252 56.5195 20.0121 57.4146 19.8842L58.4376 19.7563V10.102C53.4506 10.102 49.1668 10.8905 45.5864 12.4676C42.4749 13.8742 39.9174 15.8349 37.9141 18.3497C36.2517 20.3957 35.037 22.7613 34.2697 25.4466C33.6304 27.5778 33.3107 29.709 33.3107 31.8403V53.8982H58.4376V29.2189H48.2717Z"
                                     fill="#C1A470" />
                             </svg>
-
                         </div>
 
                         <div class="owl-carousel testimonials-carousel" id="testimonialsOwlCarousel">
@@ -707,9 +731,9 @@
                                 <blockquote class="testimonial-card">
                                     <p class="testimonial-card__quote">
                                         The team was incredibly professional
-                                        and supportive, making my home-
-                                        buying journey smooth, enjoyable, and
-                                        completely stress-fr ee from start to
+                                        and supportive, making my home-buying
+                                        journey smooth, enjoyable, and
+                                        completely stress-free from start to
                                         finish.
                                     </p>
 
@@ -729,9 +753,9 @@
                                 <blockquote class="testimonial-card">
                                     <p class="testimonial-card__quote">
                                         The team was incredibly professional
-                                        and supportive, making my home-
-                                        buying journey smooth, enjoyable, and
-                                        completely stress-fr ee from start to
+                                        and supportive, making my home-buying
+                                        journey smooth, enjoyable, and
+                                        completely stress-free from start to
                                         finish.
                                     </p>
 
@@ -751,9 +775,9 @@
                                 <blockquote class="testimonial-card">
                                     <p class="testimonial-card__quote">
                                         The team was incredibly professional
-                                        and supportive, making my home-
-                                        buying journey smooth, enjoyable, and
-                                        completely stress-fr ee from start to
+                                        and supportive, making my home-buying
+                                        journey smooth, enjoyable, and
+                                        completely stress-free from start to
                                         finish.
                                     </p>
 
@@ -789,8 +813,11 @@
 
             <!-- Section Header -->
             <header class="consultation-section__header">
-                <p class="consultation-section__eyebrow">Prompt Consultation</p>
-                <h2 class="consultation-section__title" id="consultationHeading">
+                <p class="consultation-section__eyebrow" data-aos="fade-up" data-aos-delay="0">
+                    Prompt Consultation
+                </p>
+                <h2 class="consultation-section__title" id="consultationHeading" data-aos="fade-up"
+                    data-aos-delay="120">
                     Fill The Form Below &amp; An Agent Will Contact You Shortly
                 </h2>
             </header>
@@ -798,37 +825,37 @@
             <!-- Static Pill Form UI -->
             <form class="consultation-form" action="#" method="post">
                 <div class="consultation-form__fields">
-                    <div class="consultation-form__group">
+                    <div class="consultation-form__group" data-aos="fade-up" data-aos-delay="180">
                         <label for="consultName" class="visually-hidden">Name</label>
                         <input type="text" id="consultName" name="fullname" class="consultation-form__input"
                             placeholder="Name *" required />
                     </div>
 
-                    <div class="consultation-form__group">
+                    <div class="consultation-form__group" data-aos="fade-up" data-aos-delay="280">
                         <label for="consultPhone" class="visually-hidden">Phone Number</label>
                         <input type="tel" id="consultPhone" name="phone" class="consultation-form__input"
                             placeholder="Phone No. *" required />
                     </div>
 
-                    <div class="consultation-form__group">
+                    <div class="consultation-form__group" data-aos="fade-up" data-aos-delay="380">
                         <label for="consultEmail" class="visually-hidden">Email Address</label>
                         <input type="email" id="consultEmail" name="email" class="consultation-form__input"
                             placeholder="Email address *" required />
                     </div>
 
-                    <button type="submit" class="consultation-form__submit" aria-label="Submit consultation request">
+                    <button type="submit" class="consultation-form__submit" aria-label="Submit consultation request"
+                        data-aos="zoom-in" data-aos-delay="460">
                         <svg width="29" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M22.4205 15.914L0.0883785 16.4521L1.64016e-05 12.7852L22.3321 12.2471L12.2503 2.63967L14.798 -4.0302e-07L29.4133 13.9275L15.485 28.5097L12.8131 25.9958L22.4205 15.914Z"
                                 fill="#C1A470" />
                         </svg>
-
                     </button>
                 </div>
             </form>
 
             <!-- WhatsApp Direct Contact Prompt -->
-            <div class="consultation-section__whatsapp">
+            <div class="consultation-section__whatsapp" data-aos="fade-up" data-aos-delay="520">
                 <span class="consultation-section__whatsapp-text">Or Contact Us Right Now Via</span>
                 <a href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer"
                     class="consultation-section__whatsapp-link" aria-label="Contact us on WhatsApp">
@@ -837,7 +864,6 @@
                             d="M32.2667 11.5864C30.9227 10.2324 29.3229 9.15905 27.5605 8.42885C25.7979 7.69865 23.9078 7.32619 22 7.3331C19.4497 7.3356 16.9446 8.00814 14.7358 9.28337C12.5271 10.5586 10.6922 12.3918 9.4148 14.5993C8.13744 16.8068 7.46252 19.3112 7.45757 21.8616C7.45264 24.4121 8.11788 26.919 9.38668 29.1315L7.33334 36.6665L15.0333 34.6498C17.1596 35.8327 19.5487 36.4631 21.9817 36.4831C25.8495 36.4833 29.5607 34.9556 32.3074 32.2327C35.0543 29.51 36.6144 25.8124 36.6483 21.9448C36.6355 20.0148 36.2417 18.1064 35.4899 16.3289C34.738 14.5514 33.6426 12.9398 32.2667 11.5864ZM22 33.9715C19.8325 33.9729 17.7045 33.3903 15.84 32.2848L15.4 32.0098L10.835 33.2198L12.045 28.7648L11.7517 28.3065C10.192 25.7887 9.60987 22.7863 10.1156 19.868C10.6214 16.9498 12.18 14.3184 14.496 12.4724C16.812 10.6263 19.7247 9.69381 22.6822 9.85153C25.6397 10.0092 28.4368 11.2462 30.5433 13.3281C32.846 15.5798 34.1642 18.6512 34.21 21.8715C34.181 25.0906 32.8818 28.168 30.595 30.4342C28.3085 32.7002 25.2193 33.9716 22 33.9715ZM28.6183 24.9148C28.2517 24.7315 26.4733 23.8515 26.1433 23.7415C25.8133 23.6315 25.5567 23.5581 25.3183 23.9248C24.9597 24.4163 24.574 24.8875 24.1633 25.3365C23.9617 25.5931 23.7417 25.6115 23.375 25.3365C21.2845 24.5104 19.5428 22.9887 18.4433 21.0281C18.0583 20.3865 18.81 20.4231 19.5067 19.0481C19.5582 18.9489 19.585 18.8389 19.585 18.7273C19.585 18.6156 19.5582 18.5056 19.5067 18.4065C19.5067 18.2231 18.6817 16.4264 18.3883 15.7114C18.095 14.9964 17.8017 15.1064 17.5633 15.0881H16.8483C16.6631 15.0909 16.4806 15.1333 16.313 15.2123C16.1454 15.2914 15.9967 15.4053 15.8767 15.5464C15.4653 15.9464 15.1445 16.43 14.9357 16.9644C14.727 17.4989 14.6353 18.0719 14.6667 18.6448C14.7816 20.0163 15.2981 21.3235 16.1517 22.4031C17.714 24.7421 19.8552 26.6368 22.3667 27.9031C23.6839 28.672 25.2148 28.9936 26.73 28.8198C27.2345 28.7197 27.7125 28.5145 28.1325 28.2175C28.5527 27.9207 28.9056 27.5387 29.1683 27.0965C29.4118 26.5567 29.4884 25.9567 29.3883 25.3731C29.2233 25.1898 28.985 25.0981 28.6183 24.9148Z"
                             fill="#C1A470" />
                     </svg>
-
                 </a>
             </div>
 
@@ -856,15 +882,18 @@
 
                 <!-- Left Column: Eyebrow & Large Editorial Headline -->
                 <div class="cta-banner__content">
-                    <p class="cta-banner__eyebrow text-center text-md-center text-lg-start">Lets Start With A
-                        Conversation</p>
-                    <h2 class="cta-banner__title text-center text-md-center text-lg-start" id="ctaBannerHeading">
+                    <p class="cta-banner__eyebrow text-center text-md-center text-lg-start" data-aos="fade-up"
+                        data-aos-delay="0">
+                        Lets Start With A Conversation
+                    </p>
+                    <h2 class="cta-banner__title text-center text-md-center text-lg-start" id="ctaBannerHeading"
+                        data-aos="fade-up" data-aos-delay="120">
                         Your Goals. Our Starting Point
                     </h2>
                 </div>
 
                 <!-- Right Column: Dark Pill CTA Button -->
-                <div class="cta-banner__action">
+                <div class="cta-banner__action" data-aos="fade-up" data-aos-delay="240">
                     <a href="#contact" class="cta-banner__btn">
                         <span>Request A Consultation</span>
                         <svg width="11" height="11" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -879,7 +908,6 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
                     </a>
                 </div>
 
@@ -895,7 +923,7 @@
      SITE FOOTER
 ====================================================================== -->
     <footer class="site-footer" aria-labelledby="footerHeading">
-        <!-- Full-Bleed Twilight Architectural Backdrop -->
+        <!-- Full-Bleed Twilight Architectural Backdrop (Kept static so backdrop-filter blurs cleanly) -->
         <div class="site-footer__backdrop" aria-hidden="true">
             <img src="assets/images/Footer-background.webp" alt="" class="site-footer__bg-image" loading="lazy" />
             <div class="site-footer__overlay"></div>
@@ -903,12 +931,12 @@
 
         <!-- Elevated Dark Glassmorphic Card -->
         <div class="container-xl site-footer__container mt-0 mt-md-4 mt-lg-5">
-            <div class="site-footer__card mt-0 mt-md-4 mt-lg-5">
+            <div class="site-footer__card mt-0 mt-md-4 mt-lg-5" data-aos="fade-up" data-aos-delay="100">
                 <div class="row g-5 justify-content-between">
 
                     <!-- Column 1: Brand Logo & Office Address -->
                     <div class="col-12 col-lg-4">
-                        <div class="site-footer__brand">
+                        <div class="site-footer__brand" data-aos="fade-up" data-aos-delay="220">
                             <a href="#top" class="site-footer__logo" aria-label="Crestbourne Properties LLC Home">
                                 <img src="assets/images/logo/crestbourne-white-logo.webp"
                                     alt="Crestbourne Properties LLC" class="site-footer__logo-image" />
@@ -926,10 +954,10 @@
 
                     <!-- Column 2: Discover Navigation -->
                     <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="site-footer__nav">
+                        <div class="site-footer__nav" data-aos="fade-up" data-aos-delay="320">
                             <h3 class="site-footer__nav-title">Discover</h3>
                             <ul class="site-footer__nav-list">
-                                <li><a href="#offplan" class="site-footer__nav-link">Off-plan projects</a></li>
+                                <li><a href="#off-plan" class="site-footer__nav-link">Off-plan projects</a></li>
                                 <li><a href="#communities" class="site-footer__nav-link">Dubai communities</a></li>
                                 <li><a href="#about" class="site-footer__nav-link">About us</a></li>
                                 <li><a href="#contact" class="site-footer__nav-link">Speak to an advisor</a></li>
@@ -939,7 +967,7 @@
 
                     <!-- Column 3: Editorial CTA & Direct Contact -->
                     <div class="col-12 col-lg-5">
-                        <div class="site-footer__cta">
+                        <div class="site-footer__cta" data-aos="fade-up" data-aos-delay="420">
                             <h2 class="site-footer__heading" id="footerHeading">
                                 Your Next<br />Chapter Starts here
                             </h2>
@@ -960,7 +988,6 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-
                                 </a>
 
                                 <a href="https://wa.me/971507302134" target="_blank" rel="noopener noreferrer"
@@ -979,7 +1006,6 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-
                                 </a>
                             </div>
 
@@ -1029,15 +1055,15 @@
 ====================================================================== -->
 
     <!-- jQuery & Owl Carousel 2.3.4 JS -->
-    <script src="assets/js/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="assets/js/owl.carousel.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
 
     <!-- Bootstrap 5.3.3 Bundle JS -->
-    <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom Vanilla JS -->
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/aos.js"></script>
 
     <script>
         /* ------------------------------------------------------------------------
@@ -1140,6 +1166,24 @@
             });
         }
     </script>
+
+    <script>
+        /* ------------------------------------------------------------------------
+      10. AOS (Animate On Scroll) — Smooth Luxury Preset
+   ------------------------------------------------------------------------ */
+
+        if (window.AOS) {
+            AOS.init({
+                duration: 1200,          // Longer, silkier 1.4s glide across all sections
+                easing: 'ease-out-sine', // Gentle, continuous deceleration without a snap
+                once: true,
+                offset: 100,              // Starts rising smoothly as soon as it enters view
+                anchorPlacement: 'top-bottom',
+                disable: false
+            });
+        }
+    </script>
+
 </body>
 
 </html>

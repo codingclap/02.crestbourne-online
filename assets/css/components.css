@@ -1,7 +1,25 @@
 /* ==========================================================================
    SITE HEADER & NAVIGATION
    ========================================================================== */
+[data-aos="fade-up"] {
+  transform: translate3d(0, 28px, 0);
+}
 
+[data-aos="fade-down"] {
+  transform: translate3d(0, -20px, 0);
+}
+
+[data-aos="fade-left"] {
+  transform: translate3d(28px, 0, 0);
+}
+
+[data-aos="fade-right"] {
+  transform: translate3d(-28px, 0, 0);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.95);
+}
 .site-header {
   position: fixed;
   top: 0;
