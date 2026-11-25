@@ -1069,32 +1069,32 @@
         /* ------------------------------------------------------------------------
         6. Off-Plan Projects Interactive Image Switcher
         ------------------------------------------------------------------------ */
-        const offplanTriggers = document.querySelectorAll('[data-offplan-trigger]');
-        const offplanPreviews = document.querySelectorAll('[data-offplan-preview]');
+        // const offplanTriggers = document.querySelectorAll('[data-offplan-trigger]');
+        // const offplanPreviews = document.querySelectorAll('[data-offplan-preview]');
 
-        if (offplanTriggers.length && offplanPreviews.length) {
-            const activateOffplanPreview = (index) => {
-                offplanTriggers.forEach((item) => {
-                    item.classList.toggle(
-                        'offplan-list__item--active',
-                        item.getAttribute('data-offplan-trigger') === index
-                    );
-                });
+        // if (offplanTriggers.length && offplanPreviews.length) {
+        //     const activateOffplanPreview = (index) => {
+        //         offplanTriggers.forEach((item) => {
+        //             item.classList.toggle(
+        //                 'offplan-list__item--active',
+        //                 item.getAttribute('data-offplan-trigger') === index
+        //             );
+        //         });
 
-                offplanPreviews.forEach((img) => {
-                    img.classList.toggle(
-                        'offplan-section__image--active',
-                        img.getAttribute('data-offplan-preview') === index
-                    );
-                });
-            };
+        //         offplanPreviews.forEach((img) => {
+        //             img.classList.toggle(
+        //                 'offplan-section__image--active',
+        //                 img.getAttribute('data-offplan-preview') === index
+        //             );
+        //         });
+        //     };
 
-            offplanTriggers.forEach((trigger) => {
-                const index = trigger.getAttribute('data-offplan-trigger');
-                trigger.addEventListener('mouseenter', () => activateOffplanPreview(index));
-                trigger.addEventListener('focusin', () => activateOffplanPreview(index));
-            });
-        }
+        //     offplanTriggers.forEach((trigger) => {
+        //         const index = trigger.getAttribute('data-offplan-trigger');
+        //         trigger.addEventListener('mouseenter', () => activateOffplanPreview(index));
+        //         trigger.addEventListener('focusin', () => activateOffplanPreview(index));
+        //     });
+        // }
     </script>
 
     <script>
