@@ -495,9 +495,7 @@
 
 .workflow-section {
   padding: 7.5rem 0;
-  background-color: var(--color-background-warm, #FAF6F0);
-  /* Warm off-white */
-  color: var(--color-dark, #162933);
+  background-color: #F8F7F4;
   overflow: hidden;
 }
 
@@ -508,11 +506,11 @@
 .workflow-section__grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 4.5rem;
+  gap: 4rem;
   align-items: start;
 }
 
-/* Left Column Styling */
+/* Left Column: Headline + Image Below */
 .workflow-section__content {
   display: flex;
   flex-direction: column;
@@ -520,39 +518,40 @@
 
 .workflow-section__eyebrow {
   margin: 0 0 1rem;
-  font-family: var(--font-primary, 'Inter', sans-serif);
-  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
-  font-weight: 500;
-  text-transform: capitalize;
-  letter-spacing: 0.03em;
-  color: var(--color-muted-gold, #C1A470);
+  font-family: var(--font-primary);
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
 }
 
 .workflow-section__title {
-  margin: 0 0 3rem;
-  font-family: var(--font-secondary, 'Playfair Display', serif);
-  font-size: clamp(2.5rem, 4.4vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  color: var(--color-dark, #162933);
+  margin: 0 0 2.5rem;
+  font-family: var(--font-secondary);
+  font-size: clamp(2.5rem, 4.4vw, 4.25rem);
+  font-weight: var(--fw-regular);
+  line-height: 1.08;
+  letter-spacing: -1.44px;
+  color: var(--color-dark);
 }
 
+/* Sits directly below heading in flow, pulled flush to left edge with 0 padding */
 .workflow-section__media {
   position: relative;
-  width: 100%;
-  margin-top: auto;
+  left: -8px;
+  max-width: 620px;
 }
 
 .workflow-section__image {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 480px;
+  padding: 0;
+  margin: 0;
   object-fit: contain;
+  object-position: left bottom;
 }
 
-/* Right Column & Timeline Timeline Cards Styling */
+/* Right Column & Timeline Cards (Unchanged) */
 .workflow-section__timeline {
   display: flex;
   flex-direction: column;
@@ -565,10 +564,9 @@
   gap: 1.25rem;
 }
 
-/* Frosty Warm Step Card */
 .workflow-card {
-  background: var(--color-white-translucent, rgba(255, 255, 255, 0.45));
-  border: 1px solid rgba(22, 41, 51, 0.08);
+  background: var(--color-white-translucent, rgba(255, 255, 255, 0));
+  border: 0.5px solid #898989;
   border-radius: 20px;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
@@ -579,37 +577,35 @@
   transform: translateY(-3px);
   border-color: var(--color-muted-gold, #C1A470);
   box-shadow: 0 12px 30px rgba(22, 41, 51, 0.03);
-  background: var(--color-white, #FFFFFF);
+  /* background: var(--color-white, #FFFFFF); */
 }
 
 .workflow-card__inner {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 1.85rem 2.25rem;
+  padding: 1.3rem 1.3rem;
 }
 
-/* Badge/Number Circle */
 .workflow-card__badge {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 40px;
-  height: 32px;
-  background-color: var(--color-muted-gold-bg, #C1A470);
-  color: var(--color-dark-text, #162933);
-  border-radius: 100px;
-  font-family: var(--font-primary, 'Inter', sans-serif);
-  font-size: 0.825rem;
+  width: 75px;
+  height: 45px;
+  background: #C1A470;
+  color: #222222;
+  border-radius: 22px;
+  font-family: var(--font-primary);
+  font-size: 0.99rem;
   font-weight: 600;
 }
 
-/* Inner Text styling (Pill Row Content) */
 .workflow-card__text {
   margin: 0.15rem 0 0;
-  font-family: var(--font-primary, 'Inter', sans-serif);
-  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  font-family: var(--font-primary);
+  font-size: clamp(1rem, 1.4vw, 2rem);
   font-weight: 400;
   line-height: 1.55;
   color: var(--color-dark, #162933);
@@ -617,14 +613,15 @@
 
 .workflow-section__footnote {
   margin: 0.5rem 0 0;
-  font-family: var(--font-primary, 'Inter', sans-serif);
-  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem);
   line-height: 1.5;
-  color: rgba(22, 41, 51, 0.65);
-  max-width: 32rem;
+  color: #222222;
+  letter-spacing: -0.64px;
+  max-width: 35rem;
 }
 
-/* Responsive Adaptive Styling (768px-992px & under) */
+/* Responsive Adaptive Styling */
 @media (max-width: 991.98px) {
   .workflow-section {
     padding: 5rem 0;
@@ -640,14 +637,21 @@
   }
 
   .workflow-section__media {
-    display: none;
-    /* Inward illustration can hide to optimize smaller vertical flow */
+    margin-left: calc(-1 * var(--bs-gutter-x, 0.75rem));
+  }
+
+  .workflow-card__badge {
+    font-size: 0.88rem;
   }
 }
 
 @media (max-width: 575.98px) {
   .workflow-card__inner {
-    padding: 1.5rem;
+    padding: 1.2rem 1rem;
     gap: 1rem;
   }
 }
+
+/* ==========================================================================
+   HOW WE WORK / WORKFLOW SECTION
+   ========================================================================== */
