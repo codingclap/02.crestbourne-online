@@ -441,8 +441,7 @@
   display: inline-block;
   font-family: var(--font-primary);
   font-size: clamp(0.75rem, 2vw, 0.875rem);
-  font-weight: var(--fw-medium);
-  letter-spacing: 0.16em;
+  font-weight: var(--fw-medium); 
   text-transform: uppercase;
   color: var(--color-primary);
   line-height: 1.5;
@@ -459,8 +458,7 @@
   }
 
   .value-strip__label {
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
+    font-size: 0.75rem; 
   }
 }
 
