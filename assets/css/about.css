@@ -380,7 +380,7 @@
   font-family: var(--font-secondary);
   font-size: clamp(2.5rem, 4.4vw, 4.25rem);
   font-weight: var(--fw-regular);
-  line-height: 1.08;
+  line-height: 1.15;
   letter-spacing: -1.44px;
   color: var(--color-white);
 }
@@ -529,7 +529,7 @@
   font-family: var(--font-secondary);
   font-size: clamp(2.5rem, 4.4vw, 4.25rem);
   font-weight: var(--fw-regular);
-  line-height: 1.08;
+  line-height: 1.15;
   letter-spacing: -1.44px;
   color: var(--color-dark);
 }

@@ -26,6 +26,7 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semibold: 600;
+  --fw-bold: 800;
 
   /* Layout & Spacing */
   --container-width: 1440px;
