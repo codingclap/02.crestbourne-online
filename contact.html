@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Crestbourne Properties LLC — Dubai Real Estate. Exceptional Places. Thoughtful Investments." />
+    <title>Crestbourne Properties LLC | Dubai Real Estate</title>
+
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href=" assets/css/owl.theme.default.min.css" />
+    <!-- Custom Modular CSS -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+</head>
+
+<body class="page-home">
+
+    <!-- =====================================================================
+     SITE HEADER & NAVIGATION
+====================================================================== -->
+    <header class="site-header" id="siteHeader">
+        <div class="container-xl site-header__container">
+            <nav class="site-navigation" aria-label="Primary Navigation">
+
+                <!-- Brand Logo -->
+                <a href="index.html" class="site-header__logo" aria-label="Crestbourne Properties LLC Home"
+                    data-aos="fade-down" data-aos-duration="700">
+                    <img src="assets/images/logo/crestbourne-white-logo.webp" alt="Crestbourne Properties LLC"
+                        class="site-header__logo-image" />
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="site-navigation__toggle" type="button" id="mobileMenuToggle"
+                    aria-controls="primaryNavMenu" aria-expanded="false" aria-label="Toggle navigation menu"
+                    data-aos="fade-down" data-aos-duration="700" data-aos-delay="100">
+                    <span class="site-navigation__toggle-line"></span>
+                    <span class="site-navigation__toggle-line"></span>
+                    <span class="site-navigation__toggle-line"></span>
+                </button>
+
+                <!-- Navigation Menu Wrapper (No data-aos on wrapper so mobile drawer translateX stays intact) -->
+                <div class="site-navigation__menu" id="primaryNavMenu">
+                    <ul class="site-navigation__list">
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="50">
+                            <a href="index.html" class="site-navigation__link site-navigation__link--active"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="100">
+                            <a href="#about" class="site-navigation__link">About</a>
+                        </li>
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="150">
+                            <a href="#off-plan" class="site-navigation__link">Off-Plan Projects</a>
+                        </li>
+
+                        <!-- Properties Dropdown Item -->
+                        <li class="site-navigation__item site-navigation__item--has-dropdown" data-dropdown
+                            data-aos="fade-down" data-aos-duration="650" data-aos-delay="200">
+                            <button type="button" class="site-navigation__link site-navigation__dropdown-trigger"
+                                id="propertiesDropdownBtn" aria-expanded="false" aria-haspopup="true"
+                                aria-controls="propertiesDropdownMenu">
+                                <span>Properties</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </button>
+
+                            <ul class="site-navigation__dropdown" id="propertiesDropdownMenu"
+                                aria-labelledby="propertiesDropdownBtn">
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#buy-properties" class="site-navigation__dropdown-link">Buy Properties</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#rent-properties" class="site-navigation__dropdown-link">Rent
+                                        Properties</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#luxury-villas" class="site-navigation__dropdown-link">Luxury Villas</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#penthouses" class="site-navigation__dropdown-link">Waterfront
+                                        Penthouses</a>
+                                </li>
+                                <li class="site-navigation__dropdown-item">
+                                    <a href="#commercial" class="site-navigation__dropdown-link">Commercial Spaces</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="250">
+                            <a href="#communities" class="site-navigation__link">Communities</a>
+                        </li>
+                        <li class="site-navigation__item" data-aos="fade-down" data-aos-duration="650"
+                            data-aos-delay="300">
+                            <a href="#contact" class="site-navigation__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Mobile-only CTA inside drawer -->
+                    <div class="site-navigation__mobile-cta">
+                        <a href="#contact" class="btn-crestbourne btn-crestbourne--pill">
+                            <span>Get In Touch</span>
+                            <svg width="11" height="11" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2015_346_mobile)">
+                                    <path
+                                        d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                        fill="#C1A470" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2015_346_mobile">
+                                        <rect width="10" height="10" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desktop Header CTA -->
+                <div class="site-header__actions" data-aos="fade-down" data-aos-duration="700" data-aos-delay="350">
+                    <a href="#contact" class="btn-crestbourne btn-crestbourne--pill">
+                        <span>Get In Touch</span>
+                        <svg width="11" height="11" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2015_346_desktop)">
+                                <path
+                                    d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                    fill="#C1A470" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2015_346_desktop">
+                                    <rect width="10" height="10" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- =====================================================================
+     SITE HEADER & NAVIGATION
+====================================================================== -->
+
+
+    <!-- =====================================================================
+     PAGE HERO BANNER — CONTACT US
+====================================================================== -->
+    <style>
+        .value-strip {
+            background-color: #F8F7F4;
+        }
+    </style>
+    <main id="mainContent">
+        <section class="page-hero" aria-labelledby="pageHeroHeading">
+            <!-- Full-Bleed Architectural Villa Background -->
+            <div class="page-hero__backdrop" aria-hidden="true">
+                <img src="assets/images/about/about-hero-bg.webp" alt="" class="page-hero__bg-image"
+                    fetchpriority="high" />
+                <div class="page-hero__overlay"></div>
+            </div>
+
+            <!-- Centered Editorial Title -->
+            <div class="container-xl page-hero__container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title" id="pageHeroHeading" data-aos="fade-up" data-aos-delay="250">
+                        Contact Us
+                    </h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- =====================================================================
+     PAGE HERO BANNER — CONTACT US
+====================================================================== -->
+
+    <!-- =====================================================================
+     VALUE PILLARS STRIP
+====================================================================== -->
+    <section class="value-strip" aria-label="Our Core Commitments">
+        <div class="container-xl value-strip__container">
+            <ul class="value-strip__list">
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="0">
+                    <span class="value-strip__label">A Property That Fits Your Goals</span>
+                </li>
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="150">
+                    <span class="value-strip__label">Clarity At Every Step</span>
+                </li>
+                <li class="value-strip__item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="value-strip__label">A Relationship Beyond The Transaction</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- =====================================================================
+     VALUE PILLARS STRIP
+====================================================================== -->
+
+    <!-- =====================================================================
+     SITE FOOTER
+====================================================================== -->
+    <footer class="site-footer" aria-labelledby="footerHeading">
+        <!-- Full-Bleed Twilight Architectural Backdrop (Kept static so backdrop-filter blurs cleanly) -->
+        <div class="site-footer__backdrop" aria-hidden="true">
+            <img src="assets/images/Footer-background.webp" alt="" class="site-footer__bg-image" loading="lazy" />
+            <div class="site-footer__overlay"></div>
+        </div>
+
+        <!-- Elevated Dark Glassmorphic Card -->
+        <div class="container-xl site-footer__container mt-0 mt-md-4 mt-lg-5">
+            <div class="site-footer__card mt-0 mt-md-4 mt-lg-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-5 justify-content-between">
+
+                    <!-- Column 1: Brand Logo & Office Address -->
+                    <div class="col-12 col-lg-4">
+                        <div class="site-footer__brand" data-aos="fade-up" data-aos-delay="220">
+                            <a href="#top" class="site-footer__logo" aria-label="Crestbourne Properties LLC Home">
+                                <img src="assets/images/logo/crestbourne-white-logo.webp"
+                                    alt="Crestbourne Properties LLC" class="site-footer__logo-image" />
+                            </a>
+
+                            <p class="site-footer__tagline">
+                                A considered approach to your next property.
+                            </p>
+                            <address class="site-footer__address">
+                                Office 1704-29, Ontario Tower, Business Bay, <br
+                                    class="d-none d-md-none d-lg-block d-xl-block" /> Dubai, UAE
+                            </address>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Discover Navigation -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="site-footer__nav" data-aos="fade-up" data-aos-delay="320">
+                            <h3 class="site-footer__nav-title">Discover</h3>
+                            <ul class="site-footer__nav-list">
+                                <li><a href="#off-plan" class="site-footer__nav-link">Off-plan projects</a></li>
+                                <li><a href="#communities" class="site-footer__nav-link">Dubai communities</a></li>
+                                <li><a href="#about" class="site-footer__nav-link">About us</a></li>
+                                <li><a href="#contact" class="site-footer__nav-link">Speak to an advisor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Editorial CTA & Direct Contact -->
+                    <div class="col-12 col-lg-5">
+                        <div class="site-footer__cta" data-aos="fade-up" data-aos-delay="420">
+                            <h2 class="site-footer__heading" id="footerHeading">
+                                Your Next <br class="d-none d-md-none d-lg-block d-xl-block" /> Chapter Starts here
+                            </h2>
+
+                            <div class="site-footer__actions">
+                                <a href="#contact" class="site-footer__btn site-footer__btn--primary">
+                                    <span>Request A Consultation</span>
+                                    <svg width="11" height="11" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_5_250)">
+                                            <path
+                                                d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                                fill="#203440" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_5_250">
+                                                <rect width="10" height="10" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+
+                                <a href="https://wa.me/971507302134" target="_blank" rel="noopener noreferrer"
+                                    class="site-footer__btn site-footer__btn--outline">
+                                    <span>WhatsApp</span>
+                                    <svg width="11" height="11" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2046_361)">
+                                            <path
+                                                d="M8.33167 2.83716L1.17882 10L0 8.82118L7.16284 1.66833H0.849151V0H10V9.15085H8.33167V2.83716Z"
+                                                fill="#C1A470" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2046_361">
+                                                <rect width="10" height="10" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="site-footer__contacts">
+                                <a href="mailto:contact@crestbourne.ae" class="site-footer__contact-item">
+                                    <svg width="23" height="17" viewBox="0 0 23 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 3.00005L9.3625 7.42857C10.6292 8.19048 12.3708 8.19048 13.6375 7.42857L21 3"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#C1A470" />
+                                        <path
+                                            d="M3.33333 1H19.6667C20.9553 1 22 1.95939 22 3.14286V13.8571C22 15.0406 20.9553 16 19.6667 16H3.33333C2.04467 16 1 15.0406 1 13.8571V3.14286C1 1.95939 2.04467 1 3.33333 1Z"
+                                            stroke-width="2" stroke-linecap="round" stroke="#C1A470" />
+                                    </svg>
+
+                                    <span>contact@crestbourne.ae</span>
+                                </a>
+
+                                <a href="tel:+971507302134" class="site-footer__contact-item">
+                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.937 13.1681L14.4115 12.6964L13.3097 11.5883L12.8354 12.0601L13.937 13.1681ZM16.0048 12.4988L17.9949 13.5806L18.7412 12.2079L16.7511 11.126L16.0048 12.4988ZM18.3781 15.7308L16.8983 17.2022L17.9999 18.3102L19.4797 16.8389L18.3781 15.7308ZM15.9966 17.6759C14.4863 17.8167 10.5788 17.6913 6.34815 13.4846L5.24645 14.5926C9.86318 19.1831 14.2572 19.4073 16.1416 19.2317L15.9966 17.6759ZM6.34815 13.4846C2.31547 9.47479 1.64746 6.10224 1.5643 4.63912L0.00432161 4.72777C0.108967 6.56926 0.936124 10.3068 5.24645 14.5926L6.34815 13.4846ZM7.78078 7.04678L8.07953 6.74971L6.97786 5.64172L6.6791 5.93878L7.78078 7.04678ZM8.31734 2.96303L7.00385 1.20845L5.75303 2.14485L7.06651 3.89944L8.31734 2.96303ZM2.58612 0.826555L0.951124 2.45227L2.05283 3.56027L3.68783 1.93456L2.58612 0.826555ZM7.22995 6.49278C6.6791 5.93878 6.67835 5.93952 6.6776 5.94027C6.67735 5.94052 6.6766 5.94128 6.67609 5.94179C6.67507 5.94283 6.67403 5.94387 6.67298 5.94494C6.67086 5.9471 6.66868 5.94934 6.66643 5.95167C6.66192 5.95635 6.65714 5.96141 6.65212 5.96687C6.64207 5.97777 6.63104 5.99025 6.61923 6.00435C6.59561 6.03252 6.56885 6.06722 6.54073 6.10873C6.48434 6.19195 6.4229 6.30198 6.37077 6.44036C6.26438 6.7227 6.20735 7.0949 6.27885 7.55578C6.41869 8.45712 7.03943 9.64771 8.62953 11.2288L9.7312 10.1207C8.24318 8.64114 7.8887 7.74072 7.82286 7.31624C7.79151 7.11423 7.82401 7.01481 7.83297 6.99126C7.83838 6.9767 7.84099 6.97521 7.83432 6.98516C7.83099 6.99002 7.82547 6.99764 7.81682 7.0079C7.81255 7.01303 7.80745 7.01885 7.80151 7.02533C7.79849 7.02857 7.79536 7.03197 7.79182 7.03554C7.79015 7.03734 7.78838 7.03916 7.78651 7.04103C7.78557 7.04197 7.78463 7.04292 7.7837 7.04388C7.78328 7.04436 7.78255 7.04509 7.78224 7.04533C7.78151 7.04605 7.78078 7.04678 7.22995 6.49278ZM8.62953 11.2288C10.2202 12.8103 11.4163 13.4258 12.3191 13.5644C12.7805 13.6351 13.1524 13.5786 13.4346 13.4735C13.573 13.422 13.6832 13.3613 13.7665 13.3054C13.8082 13.2775 13.843 13.2509 13.8712 13.2275C13.8854 13.2158 13.8979 13.2049 13.9088 13.1949C13.9143 13.1899 13.9194 13.1852 13.9241 13.1807C13.9265 13.1784 13.9287 13.1763 13.9309 13.1742C13.9319 13.1731 13.933 13.1721 13.934 13.171C13.9345 13.1705 13.9354 13.1698 13.9356 13.1696C13.9363 13.1689 13.937 13.1681 13.3862 12.6141C12.8354 12.0601 12.8361 12.0594 12.8368 12.0586C12.837 12.0584 12.8378 12.0577 12.8383 12.0572C12.8392 12.0563 12.8402 12.0553 12.8411 12.0544C12.8431 12.0526 12.8448 12.0508 12.8466 12.0491C12.8503 12.0456 12.8537 12.0425 12.8569 12.0395C12.8634 12.0336 12.8692 12.0285 12.8744 12.0244C12.8846 12.0158 12.8922 12.0104 12.8969 12.0072C12.9066 12.0007 12.9046 12.0036 12.8892 12.0094C12.8637 12.0189 12.7615 12.0515 12.5561 12.0199C12.1256 11.954 11.2188 11.5998 9.7312 10.1207L8.62953 11.2288ZM7.00385 1.20845C5.94207 -0.209872 3.85418 -0.434299 2.58612 0.826555L3.68783 1.93456C4.24166 1.38386 5.22529 1.43991 5.75303 2.14485L7.00385 1.20845ZM1.5643 4.63912C1.54381 4.27859 1.70917 3.90198 2.05283 3.56027L0.951124 2.45227C0.391415 3.00881 -0.0486055 3.79662 0.00432161 4.72777L1.5643 4.63912ZM16.8983 17.2022C16.612 17.4869 16.3052 17.6472 15.9966 17.6759L16.1416 19.2317C16.9068 19.1603 17.5338 18.7738 17.9999 18.3102L16.8983 17.2022ZM8.07953 6.74971C9.10505 5.73 9.1813 4.11709 8.31734 2.96303L7.06651 3.89944C7.48682 4.46088 7.42432 5.19779 6.97786 5.64172L8.07953 6.74971ZM17.9949 13.5806C18.8468 14.0438 18.9795 15.1327 18.3781 15.7308L19.4797 16.8389C20.8759 15.4506 20.4454 13.1343 18.7412 12.2079L17.9949 13.5806ZM14.4115 12.6964C14.8115 12.2986 15.4554 12.2001 16.0048 12.4988L16.7511 11.126C15.6223 10.5124 14.2215 10.6819 13.3097 11.5883L14.4115 12.6964Z"
+                                            fill="#C1A470" />
+                                    </svg>
+
+                                    <span>+971 50 730 2134</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================================
+     SITE FOOTER
+====================================================================== -->
+
+
+    <!-- =====================================================================
+     REAL ESTATE NEEDS / OWL CAROUSEL SECTION
+====================================================================== -->
+
+    <!-- jQuery & Owl Carousel 2.3.4 JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- Bootstrap 5.3.3 Bundle JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Vanilla JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/aos.js"></script>
+
+
+    <script>
+        /* ------------------------------------------------------------------------
+      10. AOS (Animate On Scroll) — Smooth Luxury Preset
+   ------------------------------------------------------------------------ */
+
+        if (window.AOS) {
+            AOS.init({
+                duration: 1200,          // Longer, silkier 1.4s glide across all sections
+                easing: 'ease-out-sine', // Gentle, continuous deceleration without a snap
+                once: true,
+                offset: 100,              // Starts rising smoothly as soon as it enters view
+                anchorPlacement: 'top-bottom',
+                disable: false
+            });
+        }
+    </script>
+
+</body>
+
+</html>
